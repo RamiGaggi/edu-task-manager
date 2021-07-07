@@ -18,12 +18,13 @@ jobs:
         run: |
           pip install poetry
           make install
-      - name: Run flake8
-        run: |
-          make lint
       - name: CHEEECK
         run: |
           make check
+      - name: Run flake8
+        run: |
+          make lint
+
       # - name: Run tests
       #   run: |
       #     make test
