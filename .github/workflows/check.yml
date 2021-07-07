@@ -1,4 +1,4 @@
-name: page-loader-check
+name: check
 
 on: [push, pull_request]
 
