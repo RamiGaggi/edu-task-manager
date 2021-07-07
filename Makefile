@@ -1,8 +1,11 @@
 install:
-	@poetry install --extras psycopg2-binary
+	poetry install --extras psycopg2-binary
 
-build:
-	poetry build
+runserver:
+	poetry run python manage.py runserver 0.0.0.0:8000
+
+lint:
+	poetry run flake8
 
 test:
 	poetry run pytest
@@ -10,5 +13,3 @@ test:
 test-coverage:
 	poetry run pytest
 
-lint:
-	poetry run flake8
