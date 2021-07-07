@@ -5,6 +5,8 @@ on: [push, pull_request]
 jobs:
   test-build:
     runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: 'SECRET'
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -19,6 +21,9 @@ jobs:
       - name: Run flake8
         run: |
           make lint
+      - name: CHEEECK
+        run: |
+          make check
       # - name: Run tests
       #   run: |
       #     make test

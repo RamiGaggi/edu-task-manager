@@ -7,6 +7,8 @@ runserver:
 lint:
 	poetry run flake8
 
+check:
+	poetry run python -m task_manager.settings
 test:
 	poetry run pytest
 
