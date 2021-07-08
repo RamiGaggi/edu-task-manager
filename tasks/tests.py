@@ -1,5 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse
+from tasks.logger import logger
+
+logger.info('Running tests for task app')
 
 
 class TasksIndexViewTests(TestCase):
