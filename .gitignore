@@ -5,8 +5,7 @@
 __pycache__/
 staticfiles/
 htmlcov/
-drafts.py
-
+draf
 .favorites.json
 .env
 .python-version
@@ -15,4 +14,3 @@ drafts.py
 *.mo
 .coverage
 coverage.xml
-*.log
