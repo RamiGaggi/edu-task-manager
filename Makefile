@@ -16,7 +16,7 @@ test:
 test-coverage:
 	poetry run coverage run --source='.' manage.py test
 
-coverage-xml: .coverage
+coverage-xml:
 	poetry run coverage xml
 
 requirements.txt: poetry.lock
