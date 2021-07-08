@@ -14,7 +14,7 @@ test:
 	poetry run python manage.py test
 
 test-coverage:
-	poetry run coverage run --source='.' manage.py test
+	poetry run coverage run manage.py test
 
 coverage-xml:
 	poetry run coverage xml
