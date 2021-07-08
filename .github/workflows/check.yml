@@ -15,22 +15,24 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install dependencies
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
         run: |
           pip install poetry
           make install
-      - name: CHEEECK
-        run: |
-          make check
       - name: Run flake8
         run: |
           make lint
-
-      # - name: Run tests
-      #   run: |
-      #     make test
-      # - name: Test coverage
-      #   uses: paambaati/codeclimate-action@v2.7.5
-      #   env:
-      #     CC_TEST_REPORTER_ID: ${{ secrets.TEST_REPORTER_ID }}
-      #   with:
-      #       coverageCommand: make test-coverage
+      - name: Run tests and coverage
+        run: |
+          make test-coverage
+      - name: Push coverage xml
+        uses: paambaati/codeclimate-action@v2.7.5
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.TEST_REPORTER_ID }}
+        with:
+            coverageCommand: make coverage

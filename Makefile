@@ -8,10 +8,16 @@ lint:
 	poetry run flake8
 
 check:
-	poetry run python -m task_manager.settings
+	poetry run python -m task_manager_site.settings
+
 test:
-	poetry run pytest
+	poetry run python manage.py test
 
 test-coverage:
-	poetry run pytest
+	poetry run coverage run --source='.' manage.py test
 
+coverage-xml: .coverage
+	poetry run coverage xml
+
+requirements.txt: poetry.lock
+	poetry export --format requirements.txt --output requirements.txt --extras psycopg2

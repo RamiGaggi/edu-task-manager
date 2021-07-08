@@ -5,10 +5,13 @@
 __pycache__/
 staticfiles/
 htmlcov/
+drafts.py
 
+.favorites.json
 .env
 .python-version
 *.sqlite3
 *.bak
 *.mo
 .coverage
+coverage.xml
