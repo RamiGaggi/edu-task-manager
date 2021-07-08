@@ -36,4 +36,4 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.TEST_REPORTER_ID }}
         with:
-            coverageCommand: make coverage-xml
+            coverageCommand: make test-coverage && make coverage-xml
