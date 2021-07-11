@@ -1,0 +1,31 @@
+{% extends 'tasks/bootstrap.html' %}
+
+{% load bootstrap4 %}
+
+
+{% block bootstrap4_content %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-3">
+      <a class="navbar-brand" href="/">{% block title %}Менеджер задач{% endblock %}</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Пользователи</a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Вход</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Регистрация</a>
+            </li>
+        </ul>
+        
+      </div>
+    </nav>
+{% endblock %}
