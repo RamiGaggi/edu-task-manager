@@ -24,3 +24,6 @@ requirements.txt: poetry.lock
 
 collectstatic:
 	poetry run python manage.py collectstatic
+
+compile_translation:
+	(cd tasks/; django-admin compilemessages)
