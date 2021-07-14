@@ -1,1 +1,1479 @@
 python-3.9.4
+<!DOCTYPE html>
+<html lang="en-GB" >
+<head>
+                            <title>Релиз 2.42 - Проект ЕТС - WIKI gost-group.com</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://wiki.gost-group.com">
+
+    <meta id="atlassian-token" name="atlassian-token" content="8a5d5c0fe242422c1d7b91a2faa351e6eedf5bff">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="ETS">
+<script type="text/javascript">
+        var contextPath = '';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1626260263335">
+        
+    
+        
+            <meta name="ajs-show-space-welcome-dialog" content="true">
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-discovered-plugin-features" content="{&quot;com.atlassian.confluence.plugins.confluence-dashboard&quot;:[&quot;dialog&quot;,&quot;transition-saved-for-later&quot;,&quot;tips&quot;],&quot;com.atlassian.confluence.plugins.confluence-page-banner&quot;:[&quot;recently-work-on-contributor-lozenge&quot;],&quot;com.atlassian.confluence.plugins.confluence-jira-metadata&quot;:[&quot;linked-issues-dropdown&quot;]}">
+            <meta name="ajs-keyboardshortcut-hash" content="1dbfd05b1f566ecb6c860995e2a7219b">
+            <meta id="team-calendars-has-jira-link" content="true">
+            <meta name="ajs-team-calendars-display-time-format" content="displayTimeFormat24">
+            <meta id="team-calendars-display-week-number" content="false">
+            <meta id="team-calendars-user-timezone" content="Europe/Moscow">
+            <script type="text/x-template" id="team-calendars-messages" title="team-calendars-messages"><fieldset class="i18n hidden"><input type="hidden" name="calendar3.month.long.july" value="July"><input type="hidden" name="calendar3.day.short.wednesday" value="Wed"><input type="hidden" name="calendar3.day.short.thursday" value="Thu"><input type="hidden" name="calendar3.month.short.march" value="Mar"><input type="hidden" name="calendar3.month.long.april" value="April"><input type="hidden" name="calendar3.month.long.october" value="October"><input type="hidden" name="calendar3.month.long.august" value="August"><input type="hidden" name="calendar3.month.short.july" value="Jul"><input type="hidden" name="calendar3.month.short.may" value="May"><input type="hidden" name="calendar3.month.short.november" value="Nov"><input type="hidden" name="calendar3.day.long.friday" value="Friday"><input type="hidden" name="calendar3.day.long.sunday" value="Sunday"><input type="hidden" name="calendar3.day.long.saturday" value="Saturday"><input type="hidden" name="calendar3.month.short.april" value="Apr"><input type="hidden" name="calendar3.day.long.wednesday" value="Wednesday"><input type="hidden" name="calendar3.month.long.december" value="December"><input type="hidden" name="calendar3.month.short.october" value="Oct"><input type="hidden" name="calendar3.day.long.monday" value="Monday"><input type="hidden" name="calendar3.month.short.june" value="Jun"><input type="hidden" name="calendar3.day.short.monday" value="Mon"><input type="hidden" name="calendar3.day.short.tuesday" value="Tue"><input type="hidden" name="calendar3.day.short.saturday" value="Sat"><input type="hidden" name="calendar3.month.long.march" value="March"><input type="hidden" name="calendar3.month.long.june" value="June"><input type="hidden" name="calendar3.month.short.february" value="Feb"><input type="hidden" name="calendar3.month.short.august" value="Aug"><input type="hidden" name="calendar3.month.short.december" value="Dec"><input type="hidden" name="calendar3.day.short.sunday" value="Sun"><input type="hidden" name="calendar3.month.long.february" value="February"><input type="hidden" name="calendar3.day.long.tuesday" value="Tuesday"><input type="hidden" name="calendar3.month.long.may" value="May"><input type="hidden" name="calendar3.month.long.september" value="September"><input type="hidden" name="calendar3.month.long.november" value="November"><input type="hidden" name="calendar3.month.short.january" value="Jan"><input type="hidden" name="calendar3.month.short.september" value="Sep"><input type="hidden" name="calendar3.day.long.thursday" value="Thursday"><input type="hidden" name="calendar3.month.long.january" value="January"><input type="hidden" name="calendar3.day.short.friday" value="Fri"></fieldset></script>
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            
+    
+    
+            <meta name="ajs-page-title" content="Релиз 2.42">
+            <meta name="ajs-latest-published-page-title" content="Релиз 2.42">
+            <meta name="ajs-space-name" content="Проект ЕТС">
+            <meta name="ajs-page-id" content="1793920602">
+            <meta name="ajs-latest-page-id" content="1793920602">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="2021">
+            <meta name="ajs-parent-page-id" content="1797653791">
+            <meta name="ajs-space-key" content="ETS">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="64">
+            <meta name="ajs-jira-metadata-count-incomplete" content="false">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-user-display-name" content="Гаджиев Рамил Назимович">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://wiki.gost-group.com">
+            <meta name="ajs-version-number" content="7.12.2">
+            <meta name="ajs-build-number" content="8703">
+            <meta name="ajs-remote-user" content="ramil.gadzhiev">
+            <meta name="ajs-remote-user-key" content="ff808081721d5fc101721d9a9d2d026c">
+            <meta name="ajs-remote-user-has-licensed-access" content="true">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="true">
+            <meta name="ajs-current-user-fullname" content="Гаджиев Рамил Назимович">
+            <meta name="ajs-current-user-avatar-url" content="/images/icons/profilepics/default.svg">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/images/icons/profilepics/default.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/s/-gklfk5/8703/ish0yl/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="314572800">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="adg3.compatible.customui39eec5ed002,connect.no-applinks,adg3.compatible.customuieb546168518,es.indexing,synchrony.coming-soon.banner.disable,adg3.compatible.customui450654d8c32,connect.authentication.oauth2.impersonation,site-wide.shared-drafts,site-wide.synchrony.opt-in,adg3.compatible.customui0bb9eb0c67d,site-wide.synchrony,adg3.compatible.customui5f0c6cf2dca,adg3.wasnot.spa,confluence.cdn.disabled,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,frontend.editor.v4,http.session.registrar,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,confluence.efi.onboarding.rich.space.content,collaborative-audit-log,confluence.reindex.improvements,previews.conversion-service,editor.ajax.save,read.only.mode,graphql,previews.trigger-all-file-types,attachment.extracted.text.extractor,lucene.caching.filter,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,tc.tacca.dacca,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,confluence-inline-comments-dangling-comment,quick-reload-inline-comments-flags">
+            <meta name="ajs-atl-token" content="8a5d5c0fe242422c1d7b91a2faa351e6eedf5bff">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="dd MMM yyyy">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="/s/-gklfk5/8703/ish0yl/15/_/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/s/-gklfk5/8703/ish0yl/15/_/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch/osd.action" title="WIKI gost-group.com"/>
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="true">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-072/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.adding.project.link\u0022:\u0022Configuring+Project+links+across+Applications\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022Crowd\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022FishEye / Crucible\u0022,\u0022stash\u0022:\u0022Bitbucket Server\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022Reference Application\u0022,\u0022bamboo\u0022:\u0022Bamboo\u0022,\u0022generic\u0022:\u0022Generic Application\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible Project\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repository\u0022,\u0022stash.project\u0022:\u0022Bitbucket Server Project\u0022,\u0022generic.entity\u0022:\u0022Generic Project\u0022,\u0022confluence.space\u0022:\u0022Confluence Space\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Project\u0022,\u0022jira.project\u0022:\u0022Jira Project\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022Charlies\u0022,\u0022fecru.project\u0022:\u0022Crucible Projects\u0022,\u0022fecru.repository\u0022:\u0022FishEye Repositories\u0022,\u0022stash.project\u0022:\u0022Bitbucket Server Projects\u0022,\u0022generic.entity\u0022:\u0022Generic Projects\u0022,\u0022confluence.space\u0022:\u0022Confluence Spaces\u0022,\u0022bamboo.project\u0022:\u0022Bamboo Projects\u0022,\u0022jira.project\u0022:\u0022Jira Projects\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022Basic Access\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022Trusted Applications\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022CORS\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022OAuth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022OAuth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022View more recently visited\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022Find space categories...\u0022,\u0022search.ui.search.results.empty\u0022:\u0022We couldn\u005Cu0027\u005Cu0027t find anything matching \u005C\u0022{0}\u005C\u0022.\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022Clear selected items\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022Show more app results...\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022Search archived spaces\u0022,\u0022search.ui.filter.label\u0022:\u0022filter\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022Contributor\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022Any time\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022CURRENT\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022Clear text\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022clear your filters.\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022The past day\u0022,\u0022help.search.ui.link.title\u0022:\u0022Search tips\u0022,\u0022search.ui.filters.heading\u0022:\u0022Filter by\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022Find labels...\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022Start exploring. Your search results will appear here.\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022The past month\u0022,\u0022search.ui.input.label\u0022:\u0022Search\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0} search result|1\u005Cu003c{0} search results}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022More results\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022Date\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022The past week\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022Label\u0022,\u0022search.ui.input.alert\u0022:\u0022Hit enter to search\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022Team calendar\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022We can\u005Cu0027\u005Cu0027t find anything matching your search\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022Last modified within\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022User profile\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022Find people...\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022Type\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022Find spaces...\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022The past year\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022Advanced search\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022Space\u0022,\u0022search.ui.generic.error\u0022:\u0022Something went wrong. Refresh the page, or contact your admin if this keeps happening.\u0022,\u0022search.ui.recent.spaces\u0022:\u0022Recent Spaces\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022Try a different search term or\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022Space category\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022We couldn\u005Cu0027\u005Cu0027t find anything matching your search.\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022Show more settings and app results...\u0022,\u0022search.ui.recent.pages\u0022:\u0022Recently visited\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0} search result|1\u005Cu003c{0} search results}. Have an account? {1}Log in{2} to expand your search.\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022Start exploring. Pages and spaces you\u005Cu0027\u005Cu0027ve visited recently will appear here.\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022Space\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022recent spaces\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/6dcd839342689e7c81fe747189040cea-CDN/-gklfk5/8703/ish0yl/988326815d94524ec44a9c7c6220e87e/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/bd60eb1165201018804413993a269e86-CDN/-gklfk5/8703/ish0yl/0dde2dba1c440573a7ca2ffc4fd27998/_/download/contextbatch/css/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super/batch.css?gatekeeper-ui-v2=true&amp;highlightactions=true&amp;hostenabled=true&amp;user-logged-in=true" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/-gklfk5/8703/ish0yl/15/_/styles/colors.css" media="all">
+<script type="text/javascript" src="/s/d532b878fc0716fce85b679fe9a0c972-CDN/-gklfk5/8703/ish0yl/988326815d94524ec44a9c7c6220e87e/_/download/contextbatch/js/_super/batch.js?locale=en-GB" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/af3dbb53c94c8e84d0311acdb49b00a2-CDN/-gklfk5/8703/ish0yl/0dde2dba1c440573a7ca2ffc4fd27998/_/download/contextbatch/js/atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super/batch.js?gatekeeper-ui-v2=true&amp;highlightactions=true&amp;hostenabled=true&amp;locale=en-GB&amp;user-logged-in=true" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="WIKI gost-group.com" />
+            
+    
+
+    
+                <link rel="canonical" href="https://wiki.gost-group.com/pages/viewpage.action?pageId=1793920602">
+        <link rel="shortlink" href="https://wiki.gost-group.com/x/Wg7tag">
+    <meta name="wikilink" content="[ETS:Релиз 2.42]">
+    <meta name="page-version" content="62">
+    <meta name="ajs-page-version" content="62">
+
+</head>
+
+    
+<body      id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">Skip to content</a></li>
+    <li><a href="#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="#navigation">Skip to action menu</a></li>
+    <li><a href="#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" aria-label="Site"><div class="aui-header-inner"><div class="aui-header-before"><button class=" aui-dropdown2-trigger app-switcher-trigger aui-dropdown2-trigger-arrowless" aria-controls="app-switcher" aria-haspopup="true" role="button" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></button><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" hidden data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div class="app-switcher-loading">Loading&hellip;</div></div></div><div class="aui-header-primary"><span id="logo" class="aui-header-logo aui-header-logo-custom"><a href="/" aria-label="Go to home page"><img src="/download/attachments/262145/atl.site.logo?version=3&amp;modificationDate=1583322854267&amp;api=v2" alt="WIKI gost-group.com" /><span class="aui-header-logo-text">WIKI gost-group.com</span></a></span><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a  id="space-directory-link" href="/spacedirectory/view.action"  class=" aui-nav-imagelink"   title="Spaces">
+            <span>Spaces</span>
+    </a>
+        </li>
+                    <li>
+            
+    
+        
+<a  id="space-shuttle-web-item-link-id" href="/spacedirectory/view.action"  class=" aui-nav-imagelink"   title="">
+            <span>Categories</span>
+    </a>
+        </li>
+                    <li>
+            
+    
+        
+<a  id="people-directory-link" href="/browsepeople.action"  class=" aui-nav-imagelink"   title="People">
+            <span>People</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+                                    
+                                        <a href="/pages/createpage.action?spaceKey=ETS&amp;fromPageId=1793920602&amp;src=quick-create" id="quick-create-page-button" class="aui-button aui-button-primary" title = 'Create blank page' tabindex="0">Create</a>
+                                <a href="#" id="create-page-button" class="aui-button aui-button-primary clc-create-dialog-btn" title = 'Create from template' tabindex="0"><span class="aui-icon aui-icon-small aui-iconfont-more">Create </span></a>
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="Search" placeholder="Search" type="text" /><div id="quick-search-alert" role="alert">Hit enter to search</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">Help</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul  id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a  id="confluence-help-link" href="https://docs.atlassian.com/confluence/docs-712/" class="    "      title="Visit the Confluence documentation home"  target="_blank"
+>
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="keyboard-shortcuts-link" href="#" class="    "      title="View available keyboard shortcuts" >
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="feed-builder-link" href="/dashboard/configurerssfeed.action" class="    "      title="Create your custom RSS feed." >
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="whats-new-menu-link" href="https://confluence.atlassian.com/display/DOC/Confluence+7.12+Release+Notes?a=false" class="    "      title="" >
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+                
+<a  id="gadget-directory-link" href="#" class="   user-item administration-link "      title="Browse gadgets provided by Confluence" >
+        Available Gadgets
+</a>
+</li>
+                                            <li>
+    
+            
+<a  id="confluence-about-link" href="/aboutconfluencepage.action" class="    "      title="Get more information about Confluence" >
+        About Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+                    
+        
+            
+<a  id="notifications-anchor" href="#"  class="mw-anchor read aui-nav-imagelink"   title="">
+            <span></span>
+    </a>
+    
+    </li>
+        <li>
+                                            
+        <a id="user-menu-link" class="aui-dropdown2-trigger aui-dropdown2-trigger-arrowless " aria-haspopup="true" aria-owns="user-menu-link-content" data-username="ramil.gadzhiev" href="#" title="Гаджиев Рамил Назимович">
+                    <div class="aui-avatar aui-avatar-small">
+                <div class="aui-avatar-inner">
+                                                                                                    <img alt="Profile picture for ramil.gadzhiev" />
+                </div>
+            </div>
+            <span class="aui-icon-dropdown"></span>
+        </a>
+        <nav id="user-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul  id="user-menu-link-user-preferences"                        class="aui-list-truncate section-user-preferences first">
+                                                    <li>
+        
+            
+<a  id="view-user-history-link" href="/users/viewuserhistory.action" class="   user-item user-history popup-link "      title="" >
+        Recently viewed
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-recently-worked-on" href="/dashboard.action#recently-worked" class="   user-item "      title="" >
+        Recently worked on
+</a>
+</li>
+                                            </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul  id="user-menu-link-user-content"                        class="aui-list-truncate section-user-content">
+                                                    <li>
+    
+            
+<a  id="view-user-profile-link" href="/users/viewmyprofile.action" class="   user-item user-profile "      title="" >
+        Profile
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="view-mytasks-link" href="/plugins/inlinetasks/mytasks.action" class="   user-item list-user-status "      title="" >
+        Tasks
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-favourites-link" href="/users/viewmyfavourites.action" class="   user-item "      title="" >
+        Saved for later
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-watches-link" href="/users/viewnotifications.action" class="   user-item "      title="" >
+        Watches
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-drafts-link" href="/users/viewmydrafts.action" class="   user-item "      title="" >
+        Drafts
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-network-link" href="/users/viewfollow.action?username=ramil.gadzhiev" class="   follow-link "      title="" >
+        Network
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="user-settings-link" href="/users/viewmysettings.action" class="   user-item "      title="" >
+        Settings
+</a>
+</li>
+                                                    <li>
+    
+            
+<a  id="upm-requests-link" href="/plugins/servlet/upm/requests?source=header_user" class="    "      title="" >
+        Atlassian Marketplace
+</a>
+</li>
+                                            </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul  id="user-menu-link-user-operations"                        class="aui-list-truncate section-user-operations">
+                                                    <li>
+    
+            
+<a  id="logout-link" href="/logout.action" class="   user-item logout-link "      title="" >
+        Log Out
+</a>
+</li>
+                                            </ul>
+                </div>
+                    </nav>
+                    
+    </li>
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="Edit space details"><div class="avatar"><div class="space-logo" data-key="ETS" data-name="Проект ЕТС" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="/pages/viewpage.action?pageId=7995510" title="Проект ЕТС"><img class="avatar-img" src="/download/attachments/7995509/ETS?version=1&amp;modificationDate=1487748528519&amp;api=v2" alt="Проект ЕТС"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="/pages/viewpage.action?pageId=7995510" title="Проект ЕТС">Проект ЕТС</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div><div class="favourite-space-icon "><button class="space-favourite aui-icon aui-icon-small aui-iconfont-unstar" id="space-favourite-add" title="Add to my spaces" aria-pressed="false"></button><button class="space-favourite-hidden space-favourite aui-icon aui-icon-small aui-iconfont-star" id="space-favourite-remove" title="Remove from my spaces" aria-pressed="false"></button></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="true" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="page-tree"><div class="acs-nav-sections"><div class="main-links-section "><ul class="acs-nav-list"><li class="acs-nav-item wiki current-item" aria-current="true" data-collector-key="spacebar-pages"><a class="acs-nav-item-link tipsy-enabled" href="/collector/pages.action?key=ETS" data-collapsed-tooltip="Pages"><span class="icon"></span><span class="acs-nav-item-label">Pages</span></a></li><li class="acs-nav-item blog" data-collector-key="spacebar-blogs"><a class="acs-nav-item-link tipsy-enabled" href="/pages/viewrecentblogposts.action?key=ETS" data-collapsed-tooltip="Blog"><span class="icon"></span><span class="acs-nav-item-label">Blog</span></a></li></ul></div><div class="quick-links-wrapper"><h5 class="ia-quick-links-header-title">Space shortcuts</h5><div class="quick-links-section tipsy-enabled "><ul class="acs-nav-list"><li class="acs-nav-item pinned_page blueprint file-list"><a class="acs-nav-item-link tipsy-enabled" href="/display/ETS/File+lists" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">File lists</span></a></li><li class="acs-nav-item pinned_page blueprint jirareport"><a class="acs-nav-item-link tipsy-enabled" href="/pages/viewpage.action?pageId=61833256" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">Отчеты JIRA</span></a></li><li class="acs-nav-item external_link"><a class="acs-nav-item-link tipsy-enabled" href="https://gost-jira.atlassian.net/projects/ETS" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">JIRA до 2017 года</span></a></li><li class="acs-nav-item external_link"><a class="acs-nav-item-link tipsy-enabled" href="https://gost-jira.atlassian.net/projects/DITETS/summary" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">JIRA с 2017 года</span></a></li><li class="acs-nav-item pinned_page blueprint meeting-notes"><a class="acs-nav-item-link tipsy-enabled" href="/pages/viewpage.action?pageId=93508046" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">Результаты встреч</span></a></li><li class="acs-nav-item pinned_page blueprint retrospective"><a class="acs-nav-item-link tipsy-enabled" href="/display/ETS/Retrospectives" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">Retrospectives</span></a></li></ul></div></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="page-tree"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title page-tree"><span class="icon"></span><span class="label">Page tree</span></h5></div><div class="ia-secondary-content">
+
+
+<div class="plugin_pagetree conf-macro output-inline" data-hasbody="false" data-macro-name="pagetree">
+
+        
+        
+    <ul class="plugin_pagetree_children_list plugin_pagetree_children_list_noleftspace">
+        <div class="plugin_pagetree_children">
+        </div>
+    </ul>
+
+    <fieldset class="hidden">
+        <input type="hidden" name="treeId" value="" />
+        <input type="hidden" name="treeRequestId" value="/plugins/pagetree/naturalchildren.action?decorator=none&amp;excerpt=false&amp;sort=position&amp;reverse=false&amp;disableLinks=false&amp;expandCurrent=true&amp;placement=sidebar" />
+        <input type="hidden" name="treePageId" value="1793920602" />
+
+        <input type="hidden" name="noRoot" value="false" />
+        <input type="hidden" name="rootPageId" value="7995510" />
+
+        <input type="hidden" name="rootPage" value="" />
+        <input type="hidden" name="startDepth" value="0" />
+        <input type="hidden" name="spaceKey" value="ETS" />
+
+        <input type="hidden" name="i18n-pagetree.loading" value="Loading..." />
+        <input type="hidden" name="i18n-pagetree.error.permission" value="Unable to load page tree. It seems that you do not have permission to view the root page." />
+        <input type="hidden" name="i18n-pagetree.eeror.general" value="There was a problem retrieving the page tree. Please check the server log file for more information." />
+        <input type="hidden" name="loginUrl" value="/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D1793920602&amp;permissionViolation=true" />
+        <input type="hidden" name="mobile" value="false" />
+        <input type="hidden" name="placement" value="sidebar" />
+
+                <fieldset class="hidden">
+                                                <input type="hidden" name="ancestorId" value="1797653791" />
+                                    <input type="hidden" name="ancestorId" value="55803939" />
+                                    <input type="hidden" name="ancestorId" value="7995510" />
+                                    </fieldset>
+    </fieldset>
+</div>
+</div></div></div><div class="hidden"><a href="/collector/pages.action?key=ETS" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>Space Details</h2><div class="personal-space-logo-hint">Your profile picture is used as the logo for your personal space. <a href="/users/profile/editmyprofilepicture.action" target="_blank">Change your profile picture</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="Reorder pages" data-class="" data-href="/pages/reorderpages.action?key=ETS">Reorder pages</div></div><button id="space-tools-menu-trigger"  class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger><span class="aui-icon aui-icon-small aui-iconfont-configure">Configure</span><span class="aui-button-label">Space tools</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" hidden data-aui-alignment="top left"></div><a href="#" role="button" class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left" aria-expanded="true"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                                                    <li class="ajs-button normal">
+
+        
+        
+    
+                                                        
+    
+    
+            <a  id="editPageLink" href="/pages/editpage.action?pageId=1793920602" rel="nofollow" class="aui-button aui-button-subtle edit full-load"  accessKey="e"  title="Edit" >
+                        <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-edit"></span>
+                                <u>E</u>dit
+            </span>        </a>
+    </li>
+                                            <li class="ajs-button normal">
+
+        
+            
+    
+                                                        
+    
+    
+            <a  id="page-favourite" href="#" rel="nofollow" class="aui-button aui-button-subtle action-page-favourite"  accessKey="f"  title="Save for later" >
+                        <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-unstar"></span>
+                                Save <u>f</u>or later
+            </span>        </a>
+    </li>
+                                            <li class="ajs-button normal">
+
+        
+            
+    
+                                                        
+    
+    
+            <a  id="watch-content-button" href="#" rel="nofollow" class="aui-button aui-button-subtle watch-menu"   title="Watch (w)" >
+                        <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-unwatch"></span>
+                                <u>W</u>atch
+            </span>        </a>
+    </li>
+                                            <li class="ajs-button normal">
+
+        
+            
+    
+                                                        
+    
+    
+            <a  id="shareContentLink" href="#" rel="nofollow" class="aui-button aui-button-subtle share"   title="Share this page with others" >
+                        <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-share"></span>
+                                <u>S</u>hare
+            </span>        </a>
+    </li>
+                    
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="More options" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="More options"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul  id="action-menu-primary"                         class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="view-attachments-link" href="/pages/viewpageattachments.action?pageId=1793920602" rel="nofollow" class="action-view-attachments"  accessKey="t"  title="View Attachments" >
+                        <span>
+                                A<u>t</u>tachments (0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-view-history-link" href="/pages/viewpreviousversions.action?pageId=1793920602" rel="nofollow" class="action-view-history"   title="" >
+                        <span>
+                                Page History
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-page-permissions-link" href="/pages/viewinfo.action?pageId=1793920602" rel="nofollow" class="action-page-permissions"   title="Edit restrictions" >
+                        <span>
+                                Restrictions
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+            
+    
+                                                        
+    
+    
+            <a  id="who-can-view-button-ak-button" href="#" rel="nofollow" class="who-can-view-link"   title="" >
+                        <span>
+                                People who can view
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul  id="action-menu-secondary"                         class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="view-page-info-link" href="/pages/viewinfo.action?pageId=1793920602" rel="nofollow" class="action-view-info"   title="" >
+                        <span>
+                                Page Information
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+            
+    
+                                                        
+    
+    
+            <a  id="view-resolved-comments" href="#" rel="nofollow" class=""   title="" >
+                        <span>
+                                Resolved comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="view-in-hierarchy-link" href="/pages/reorderpages.action?key=ETS&amp;openId=1793920602#selectedPageInHierarchy" rel="nofollow" class=""   title="" >
+                        <span>
+                                View in Hierarchy
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="page-tasks-browse-space-id" href="/pages/spaceadminbrowser.action?pageId=1793920602&amp;key=ETS" rel="nofollow" class=""   title="" >
+                        <span>
+                                Space Admin Browser
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-view-source-link" href="/plugins/viewsource/viewpagesrc.action?pageId=1793920602" rel="nofollow" class="action-view-source popup-link"   title="" >
+                        <span>
+                                View Source
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-export-pdf-link" href="/spaces/flyingpdf/pdfpageexport.action?pageId=1793920602" rel="nofollow" class=""   title="" >
+                        <span>
+                                Export to PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-export-word-link" href="/exportword?pageId=1793920602" rel="nofollow" class="action-export-word"   title="" >
+                        <span>
+                                Export to Word
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="import-word-doc" href="/pages/worddav/uploadimport.action?pageId=1793920602" rel="nofollow" class=""   title="" >
+                        <span>
+                                Import Word Document
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul  id="action-menu-modify"                         class="section-modify">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="displayed-status-inline-comments" href="/pages/viewpage.action?pageId=1793920602" rel="nofollow" class=""   title="" >
+                        <span>
+                                Hide Inline Comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-copy-page-link" href="/pages/copypage.action?idOfPageToCopy=1793920602&amp;spaceKey=ETS" rel="nofollow" class="action-copy"   title="" >
+                        <span>
+                                Copy
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a  id="action-move-page-dialog-link" href="/pages/viewpage.action?pageId=1793920602" rel="nofollow" class="action-move"   title="" >
+                        <span>
+                                Move
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first" >
+                        
+                            <span class=""><a href="/collector/pages.action?key=ETS">Pages</a></span>
+                                                                                                            <li id="ellipsis" title="Show all breadcrumbs"><span><strong>&#8230;</strong></span></li>
+                                                
+                        
+        <li class="hidden-crumb" >
+                        
+                            <span class=""><a href="/pages/viewpage.action?pageId=7995510">Проект ЕТС</a></span>
+                                                                                                    
+                        
+        <li class="hidden-crumb" >
+                        
+                            <span class=""><a href="/pages/viewpage.action?pageId=55803939">Релизы</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="/display/ETS/2021">2021</a></span>
+                                                                    </ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">Skip to end of banner</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="Unrestricted" id="content-metadata-page-restrictions" class="aui-icon aui-icon-small aui-iconfont-unlocked system-metadata-restrictions"></a></li><li class="page-metadata-item noprinthas-button"  id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>Jira links</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">Go to start of banner</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="/pages/viewpage.action?pageId=1793920602">Релиз 2.42</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            Created by <span class='author'>     <a href="    /display/~anatoliy.ogarev
+"
+                       class="url fn confluence-userlink" data-username="anatoliy.ogarev"
+                            >Огарёв Анатолий Сергеевич</a></span>, last modified by <span class='editor'>     <a href="    /display/~ramil.gadzhiev
+"
+                       class="url fn confluence-userlink" data-username="ramil.gadzhiev"
+                            >Гаджиев Рамил Назимович</a></span> on <a class='last-modified' title='Show changes' href='/pages/diffpagesbyversion.action?pageId=1793920602&amp;selectedPageVersions=61&amp;selectedPageVersions=62'>Jun 14, 2021</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <div class="table-wrap"><table class="wrapped relative-table confluenceTable" style="width: 99.9452%;"><colgroup><col style="width: 1.59166%;"/><col style="width: 41.2733%;"/><col style="width: 10.7574%;"/><col style="width: 10.7574%;"/><col style="width: 5.7629%;"/><col style="width: 5.32382%;"/><col style="width: 5.26894%;"/><col style="width: 14.4347%;"/><col style="width: 4.82986%;"/></colgroup><tbody><tr><th style="width: 2.02962%;" class="confluenceTh"><br/></th><th style="width: 39.3856%;" class="confluenceTh">Наименование задачи</th><th style="width: 10.7515%;" class="confluenceTh">Таск аналитики</th><th style="width: 10.8064%;" class="confluenceTh">Таск разработки</th><th style="width: 5.75974%;" class="confluenceTh">Объект</th><th style="width: 6.69227%;" class="confluenceTh">Основание</th><th style="width: 5.26604%;" class="confluenceTh">Приоритет</th><th style="width: 14.4268%;" class="confluenceTh">Комментарий</th><th style="width: 4.82721%;" class="confluenceTh">Источник</th></tr><tr><td style="width: 2.02962%;" class="confluenceTd">1</td><td style="width: 39.3856%;" class="confluenceTd">Доработка выгрузки Реестра выданных путевых листов</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-316" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-316" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-316</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-187" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-187" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-187</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Путевые листы</td><td style="width: 6.69227%;" class="confluenceTd">ЗНИ C00754555</td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">2</td><td style="width: 39.3856%;" class="confluenceTd">Доработка отчета по топливу (для окружных пользователей дать возможность видеть данные сразу по всем организациям)</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-317" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-317" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-317</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-160" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-160" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-160</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Отчеты</td><td style="width: 6.69227%;" class="confluenceTd">ЗНИ C00745339</td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="aleksandra.pavlova" href="/display/~aleksandra.pavlova" data-linked-resource-id="1688274647" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Павлова Александра Николаевна</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">3</td><td style="width: 39.3856%;" class="confluenceTd">Настройка отображения доступных виджетов рабочего стола и сохранение настроек под каждого пользователя. </td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1767" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1767" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1767</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-2012" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-2012" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-2012</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Рабочий стол</td><td style="width: 6.69227%;" class="confluenceTd">ТЗ 4.2.7., &quot;к&quot;</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="irina.ruban" href="/display/~irina.ruban" data-linked-resource-id="1015878" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Рубан Ирина Галимнуровна</a></p><p>ЧТЗ готово</p></div></td><td class="highlight-#e3fcef confluenceTd" style="width: 4.82721%;" data-highlight-colour="#e3fcef"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">4</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">Реализация виджета на рабочем столе для общегородских пользователей по отображению ОДХ/ДТ, не назначенные на текущие задания по факсограмме с группировкой по районам и округам.</span></td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1888" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1888" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1888</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3029" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3029" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3029</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Рабочий стол</td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">ТЗ 4.2.6. &quot;д&quot;</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="irina.ruban" href="/display/~irina.ruban" data-linked-resource-id="1015878" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Рубан Ирина Галимнуровна</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">5</td><td style="width: 39.3856%;" class="confluenceTd">Реализация вывода подсказок в Подсистеме: условия выделения объектов цветами в реестрах/журналах/справочниках, условия доступности/недоступности кнопок на формах. </td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3591" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3591" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3591</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3590" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3590" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3590</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Общее</td><td style="width: 6.69227%;" class="confluenceTd">ТЗ 4.2.7., &quot;л&quot;</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="aleksandra.pavlova" href="/display/~aleksandra.pavlova" data-linked-resource-id="1688274647" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Павлова Александра Николаевна</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">6</td><td style="width: 39.3856%;" class="confluenceTd">ЕТС Доработка ТО для установки</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-318" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-318" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-318</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-203" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-203" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-203</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Реестр ТС</td><td style="width: 6.69227%;" class="confluenceTd">ЗНИ C00758611</td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">7</td><td style="width: 39.3856%;" class="confluenceTd">Доработка. При поиске ТС на карте во вкладке &quot;Информация&quot; по ТС добавить дополнительные поля: подразделение, ФИО, телефон (см. скриншот). </td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-315" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-315" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-315</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-157" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-157" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-157</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd">Карта</td><td style="width: 6.69227%;" class="confluenceTd">ЗНИ C00744395</td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper"><p><a class="confluence-userlink user-mention" data-username="anastasiya.belikova" href="/display/~anastasiya.belikova" data-linked-resource-id="1782186269" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Беликова Анастасия Андреевна</a></p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">8</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">Привязка ТО к марке шасси</span></td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-416" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-416" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-416</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-243" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-243" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-243</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><p title="">НСИ</p><p title="">(реестр ТС)</p></td><td style="width: 6.69227%;" class="confluenceTd">ЗНИ C00778685</td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">9</td><td style="width: 39.3856%;" class="confluenceTd">Реализация интерактивной таблицы для одновременного ввода данных по нескольким ТС. </td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3505" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3505" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3505</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3504" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3504" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3504</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><p title="">Доринвест.</p><p title="">Мониторинг ТС</p></td><td style="width: 6.69227%;" class="confluenceTd">ТЗ 4.2.7., &quot;б&quot;</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="aleksandra.pavlova" href="/display/~aleksandra.pavlova" data-linked-resource-id="1688274647" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Павлова Александра Николаевна</a></p><p>ЧТЗ готово</p><p><span style="color: rgb(255,0,0);">фильтрация в 41-м, окрашивание ячеек в 42-м</span></p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">10</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">Отображать формы заполнения проверок в соответствии с типом баз. Добавить возможность заполнения одновременно для всех типов.</span></td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-352" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-352" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-352</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper" title=""><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-206" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-206" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-206</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">ЗНИ  C00758856</span></td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="aleksandra.pavlova" href="/display/~aleksandra.pavlova" data-linked-resource-id="1688274647" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Павлова Александра Николаевна</a></p><p><a class="confluence-userlink user-mention" data-username="anastasiya.belikova" href="/display/~anastasiya.belikova" data-linked-resource-id="1782186269" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Беликова Анастасия Андреевна</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">11</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);">Доработка журнала ПЛ (</span>создание архива ПЛ)</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-457" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-457" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-457</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-361" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-361" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-361</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);">ЗНИ: C00814110</span></td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">12</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);">Два ДУТ в одном баке</span></td><td style="width: 10.7515%;" class="confluenceTd"><br/></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-439" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-439" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-439</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd"><br/></td><td style="width: 5.26604%;" class="confluenceTd">2</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd"><div class="content-wrapper"><p>13</p></div></td><td style="width: 39.3856%;" class="confluenceTd">Реализация виджета на рабочем столе в виде жизненного цикла заданий и путевых листов - визуализация последовательного перехода заданий и ПЛ по статусам. </td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1787" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1787" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1787</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3755" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3755" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3755</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;" class="confluenceTd">Рабочий стол</td><td style="width: 6.69227%;" class="confluenceTd">4.2.6.г.</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><div class="content-wrapper"><p><br/></p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" rowspan="2" class="confluenceTd"><div class="content-wrapper"><p>14</p></div></td><td style="width: 39.3856%;" rowspan="2" class="confluenceTd">Реализация виджета на рабочем столе с количеством ТС с запланированными ремонтами и начавшимся ремонтом</td><td style="width: 10.7515%;" rowspan="2" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1760" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1760" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1760</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1761" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1761" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1761</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></td><td style="width: 10.8064%;" rowspan="2" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3762" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3762" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3762</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p><p><br/></p></div></td><td style="width: 5.75974%;" rowspan="2" class="confluenceTd"><span style="color: rgb(23,43,77);">Рабочий стол</span></td><td style="width: 6.69227%;" class="confluenceTd">4.2.6.е.(2)</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 6.69227%;" class="confluenceTd">4.2.6.е.(3)</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">15</td><td style="text-align: left;width: 39.3856%;" class="confluenceTd">Реализация виджета на рабочем столе с количеством ТС, по которым наступает срок проведения нового технического обслуживания </td><td style="text-align: left;width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1762" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1762" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1762</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="text-align: left;width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3957" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3957" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3957</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="text-align: left;width: 5.75974%;" class="confluenceTd">Рабочий стол</td><td style="text-align: left;width: 6.69227%;" class="confluenceTd">4.2.6.е.(4)</td><td style="text-align: left;width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">16</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd">Реализация виджета на рабочем столе с количеством ТС, по которым оканчивается срок действия государственного техосмотра</td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1763" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1763" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1763</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3984" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3984" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3984</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Рабочий стол</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.6.е.(5)</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">17</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd">Реализация виджета на рабочем столе с количеством ТС, у которых оканчивается срок действия страховок КАСКО и ОСАГО</td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1764" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1764" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1764</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3983" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3983" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3983</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Рабочий стол</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.6.е.(6)</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">18</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><p><span>Выдача нескольких ролей пользователю для гибкой настройки доступа в Подсистему.</span></p></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1728" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1728" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1728</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4001" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4001" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4001</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.4.б.1.</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">19</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><p><span>Ручное блокирование учетной записи для входа в Подсистему (установка признака блокировки). </span></p></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p>ЧТЗ: <span> 
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4003" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4003" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4003</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</span><span> </span></p><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1348" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1348" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1348</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div><br/><br/></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4002" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4002" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4002</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.4.б.2.</td><td style="text-align: left;width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">20</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><p><span>Автоматическое блокирование учетной записи при бездействии за заданный срок (в календарных днях), а также при увольнении сотрудника. </span></p></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4005" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4005" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4005</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4004" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4004" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4004</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.4.б.3.</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">21</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><p><span>Реализация проверки условий сложности пароля при создании учетной записи</span></p></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1348" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1348" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1348</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4007" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4007" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4007</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.4.б.4.</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">22</td><td style="width: 39.3856%;" class="confluenceTd"><p style="text-align: left;">Создание личного кабинета пользователя в Подсистеме:</p><p style="text-align: left;">Просмотр информации о сотруднике.</p></td><td style="width: 10.7515%;" rowspan="3" class="confluenceTd"><div class="content-wrapper"><p><span style="color: rgb(23,43,77);"><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1754" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1754" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1754</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></span></p></div></td><td style="width: 10.8064%;" rowspan="3" class="confluenceTd"><div class="content-wrapper"><p><span style="color: rgb(23,43,77);"><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4006" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4006" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4006</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></span></p></div></td><td style="width: 5.75974%;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);">4.2.4.в.1.</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">23</td><td style="width: 39.3856%;" class="confluenceTd"><p style="text-align: left;">Создание личного кабинета пользователя в Подсистеме:</p><p style="text-align: left;">возможность смены пароля для учетных записей, созданных в ККЭТС (для учетных записей из СУДИР данная функция не должна быть доступна). </p></td><td style="width: 5.75974%;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);">4.2.4.в.2.</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">24</td><td style="width: 39.3856%;" class="confluenceTd"><p style="text-align: left;">Создание личного кабинета пользователя в Подсистеме:</p><p style="text-align: left;">настройка стартовой страницы. </p></td><td style="width: 5.75974%;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;" class="confluenceTd"><span style="color: rgb(23,43,77);">4.2.4.в.3.</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">25</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd">Автоматическая генерация отчетов, доступных в пользовательском интерфейсе, по расписанию с отправкой на email. </td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><br/></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1575" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1575" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1575</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Администрирование</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">4.2.4.г.</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">26</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">Интеграция с ЕГИП </span></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper" title=""><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-2907" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-2907" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-2907</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper" title=""><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3364" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3364" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3364</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Интеграция</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd"><span style="color: rgb(23,43,77);" title="">ТЗ 2020 4.2.5., &quot;г&quot;</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">27</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><span style="color: rgb(23,43,77);">Отчет по пробегу шин.</span></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3596" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3596" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3596</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3595" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3595" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3595</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Отчеты</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd"><span style="color: rgb(23,43,77);">ТЗ 4.2.8. &quot;д&quot;</span></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;text-align: left;" class="confluenceTd"><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">28</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd">Модернизация карточек объектов ОДХ и ДТ в части отображения перечня элементов и их геозон. </td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1758" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1758" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1758</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1931" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1931" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1931</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd"><p title="">НСИ</p><p title="">(геообъекты)</p></td><td style="text-align: left;width: 6.69227%;" class="confluenceTd">ТЗ 4.2.6., &quot;а&quot;</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><a class="confluence-userlink user-mention" data-username="irina.ruban" href="/display/~irina.ruban" data-linked-resource-id="1015878" data-linked-resource-version="2" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Рубан Ирина Галимнуровна</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">29</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd">Установка шин на транспортное средство: отображение визуальной схемы ТС с возможностью указывать установку шин, предварительно выбрав их из списка доступных. </td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1735" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1735" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1735</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3610" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3610" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3610</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd">Реестр ТС</td><td style="width: 6.69227%;text-align: left;" class="confluenceTd">ТЗ 4.2.3. &quot;б&quot;</td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;text-align: left;" class="confluenceTd"><div class="content-wrapper" title=""><p><a class="confluence-userlink user-mention" data-username="evgeniy.veselov" href="/display/~evgeniy.veselov" data-linked-resource-id="1793926638" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://wiki.gost-group.com">Веселов Евгений Анатольевич</a></p><p>ЧТЗ готово</p></div></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;text-align: left;" class="confluenceTd">30</td><td style="width: 39.3856%;text-align: left;" class="confluenceTd"><span style="color: rgb(23,43,77);">Отчет по данным топливной компании (Роснефть)</span></td><td style="width: 10.7515%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3476" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3476" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3476</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 10.8064%;text-align: left;" class="confluenceTd"><div class="content-wrapper"><p><span>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3477" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3477" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3477</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+ </span></p></div></td><td style="width: 5.75974%;text-align: left;" class="confluenceTd"><br/></td><td style="width: 6.69227%;text-align: left;" class="confluenceTd"><br/></td><td style="width: 5.26604%;text-align: left;" class="confluenceTd">1</td><td style="width: 14.4268%;text-align: left;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">31</td><td style="width: 39.3856%;" class="confluenceTd">СКУД (фронт) + интеграция с новым участником</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3740" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3740" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3740</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3711" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3711" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3711</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3739" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3739" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3739</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd">ТЗ</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">32</td><td style="width: 39.3856%;" class="confluenceTd">Отчет о превышении скорости. Отчет должен отображать информация о нормативной (разрешенной) скорости ТС, о превышении нормативной (разрешенной) скорости ТС, регистрационном номере ТС и ФИО водителя (при наличии путевого листа). Детальное описание отчета и перечня данных должно быть описано в ЧТЗ. Реализация функции предполагает выполнение следующих работ:<br/>- алгоритм формирования отчета;<br/>- экранная форма отчета;<br/>- алгоритм поиска по атрибутам;<br/>- выгрузка в Microsoft Excel результатов фильтрации данных.</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-1772" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-1772" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-1772</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3594" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3594" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3594</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd">4.2.8.г.</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">33</td><td style="width: 39.3856%;" class="confluenceTd">Детальное логирование действий пользователей с отображением истории изменений в основных сущностях: дата, время, пользователь, IP-адрес, сущность, событие. <br/>Логирование должно осуществляться для действий, выполненных в разделе «Мониторинговая деятельность».</td><td style="width: 10.7515%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3841" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3841" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3841</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p><br/></p><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-3840" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-3840" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-3840</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd">ТЗ</td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td style="width: 2.02962%;" class="confluenceTd">34</td><td style="width: 39.3856%;" class="confluenceTd"><span style="color: rgb(23,43,77);">Панель фильтрации в админке</span></td><td style="width: 10.7515%;" class="confluenceTd"><br/></td><td style="width: 10.8064%;" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS19-4057" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS19-4057" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS19-4057</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td style="width: 5.75974%;" class="confluenceTd"><br/></td><td style="width: 6.69227%;" class="confluenceTd"><br/></td><td style="width: 5.26604%;" class="confluenceTd">1</td><td style="width: 14.4268%;" class="confluenceTd"><br/></td><td style="width: 4.82721%;" class="confluenceTd"><br/></td></tr><tr><td colspan="1" class="confluenceTd"><p>35</p></td><td colspan="1" class="confluenceTd"><span style="color: rgb(23,43,77);">Доработка шаблонов заданий</span></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><div class="content-wrapper"><p>
+<span class="jira-issue conf-macro output-block" data-jira-key="DITETS20A-528" data-client-id="SINGLE_e6ed13ac-a49c-3901-9758-b58ad60c3bf3_1793920602_ff808081721d5fc101721d9a9d2d026c" data-hasbody="false" data-macro-name="jira">
+                    <a href="https://jira.gost-group.com/browse/DITETS20A-528" class="jira-issue-key"><span class="aui-icon aui-icon-wait issue-placeholder"> </span>DITETS20A-528</a>
+                            -
+            <span class="summary">Getting issue details...</span>
+                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-default issue-placeholder">STATUS</span>
+                </span>
+</p></div></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd">ЗНИ C00884190</td><td colspan="1" class="confluenceTd">1</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr></tbody></table></div>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="1793920602" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right  has-pen">
+            <li class="no-labels-message">
+            No labels
+        </li>
+                <li class="labels-edit-container">
+            <a href="#" class="show-labels-editor" title="Edit Labels">
+                <span class="aui-icon aui-icon-small aui-iconfont-devtools-tag-small">Edit Labels</span>
+            </a>
+        </li>
+        </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+    <div class="bottom-comment-panels comment-panels">
+                
+                    
+    
+
+
+        
+        
+    
+    <div class="quick-comment-container comment add"><p class="comment-user-logo"><a class="userLogoLink" data-username="ramil.gadzhiev" href="/users/profile/editmyprofilepicture.action" title="Add a picture of yourself"><img class="userLogo logo defaultLogo" src="/s/-gklfk5/8703/ish0yl/_/images/icons/profilepics/add_profile_pic.svg" alt="User icon: Add a picture of yourself"></a></p><div class="quick-comment-body"><div class="quick-comment-loading-container" style="display:none;"></div><div id="editor-messages"></div><div id="any-messages"></div><form style="display:block;" class="quick-comment-form aui" method="post" name="inlinecommentform" action="/pages/doaddcomment.action?pageId=1793920602" ><div title="Add a Comment" role="button" tabindex="0" aria-label="Add a Comment" class="quick-comment-prompt"><span>Write a comment…</span></div></form></div></div>
+
+            </div>
+
+            <div id="comments-actions" class="aui-toolbar noprint">
+            <p class="toolbar-group">
+                <span class="toolbar-item"><a href="/pages/viewpage.action?pageId=1793920602&showComments=true&amp;showCommentArea=true#addcomment" id="add-comment-rte" accesskey="m" class="toolbar-trigger full-load">Add Comment</a></span>
+            </p>
+        </div>
+    </div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="Overview" data-href="/spaces/viewspacesummary.action?key=ETS">Overview</div>
+            <div data-label="Content Tools" data-href="/pages/reorderpages.action?key=ETS">Content Tools</div>
+            <div data-label="Space Admin Browser" data-href="/pages/spaceadminbrowser.action?key=ETS">Space Admin Browser</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.12.2</span></li>
+            <li class="print-only">Printed by Atlassian Confluence 7.12.2</li>
+            <li class="noprint"><a href="https://support.atlassian.com/help/confluence" class="hover-footer-link" rel="nofollow">Report a bug</a></li>
+            <li class="noprint"><a href="https://www.atlassian.com/company" class="hover-footer-link" rel="nofollow">Atlassian News</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="http://www.atlassian.com/" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 200, "requestCorrelationId": "649549240d947070"}</span>
+</body>
+</html>
+    

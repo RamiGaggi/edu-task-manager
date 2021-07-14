@@ -1,1 +1,8 @@
 {% extends 'tasks/base.html' %}
+{% load i18n %}
+
+{% block bootstrap4_content %}
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">{% translate "Добро пожаловать!" %}</h1>
+    </div>
+{% endblock %}

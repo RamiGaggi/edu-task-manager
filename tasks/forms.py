@@ -1,5 +1,6 @@
 from django import forms
 
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(max_length=100)
+class ContactForm(forms.Form):
+    name = forms.CharField()
+    message = forms.CharField(widget=forms.Textarea)
