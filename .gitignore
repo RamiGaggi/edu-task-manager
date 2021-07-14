@@ -11,6 +11,6 @@ draf
 .python-version
 *.sqlite3
 *.bak
-*.mo
+__*.mo
 .coverage
 coverage.xml
