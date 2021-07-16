@@ -1,10 +1,11 @@
 {% extends 'tasks/base.html' %}
 {% load i18n %}
+{% load bootstrap4 %}
 
 {% block bootstrap4_content %}
     <h1>{% translate "Вход" %}</h1>
     <form method="post">{% csrf_token %}
-        {{ form.as_p }}
+        {% bootstrap_form form %}
         <input class="btn btn-primary" type="submit" value="{% translate "Войти" %}">
     </form>
 {% endblock %}

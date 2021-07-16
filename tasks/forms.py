@@ -1,6 +1,28 @@
-from django import forms
+
+from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.contrib.auth.models import User
 
 
-class ContactForm(forms.Form):
-    name = forms.CharField()
-    message = forms.CharField(widget=forms.Textarea)
+class UserRegistrationForm(UserCreationForm):
+    class Meta:
+        """."""
+
+        model = User
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+        ]
+
+
+class UserUpdateForm(UserChangeForm):
+    class Meta:
+        """."""
+
+        model = User
+        fields = [
+            'first_name',
+            'last_name',
+            'username',
+            'password',
+        ]

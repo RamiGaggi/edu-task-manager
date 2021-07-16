@@ -1,0 +1,11 @@
+{% extends 'tasks/base.html' %}
+{% load i18n %}
+{% load bootstrap4 %}
+
+{% block bootstrap4_content %}
+    <h1>{% translate "Удаление пользователя" %}</h1>
+    <p>Вы уверены, что хотите удалить {{ object }}?</p>
+    <form method="post">{% csrf_token %}
+        <input class="btn btn-danger" type="submit" value="{% translate "Удалить" %}">
+    </form>
+{% endblock %}
