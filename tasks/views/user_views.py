@@ -77,7 +77,7 @@ class UserDeleteView(LoginRequiredMixin, DeleteView):
 
     def delete(self, request, *args, **kwargs):
         """Add success message fo delete."""
-        success_message = 'Пользователь успешно удалён'
+        success_message = _('Пользователь успешно удалён')
         messages.add_message(self.request, messages.SUCCESS, _(success_message))
         return super().delete(request, *args, **kwargs)
 
@@ -93,18 +93,18 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         """Handle GET requests: instantiate a blank version of the form."""
         if self.request.user.id == self.kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
-        denied_message = 'У вас нет прав для изменения другого пользователя!'
-        messages.add_message(self.request, messages.ERROR, _(denied_message))
+        denied_message = _('У вас нет прав для изменения другого пользователя!')
+        messages.add_message(self.request, messages.ERROR, denied_message)
         return redirect('tasks:user-list')
 
     def get_login_url(self):  # noqa: WPS615 Found unpythonic getter or setter
         """Add denied message message fot update."""
-        denied_message = 'Вы не авторизованы! Пожалуйста, выполните вход.'
-        messages.add_message(self.request, messages.ERROR, _(denied_message))
+        denied_message = _('Вы не авторизованы! Пожалуйста, выполните вход.')
+        messages.add_message(self.request, messages.ERROR, denied_message)
         return super().get_login_url()
 
     def form_valid(self, form):
         """Add success message for update."""
-        success_message = 'Пользователь успешно изменён'
-        messages.add_message(self.request, messages.SUCCESS, _(success_message))
+        success_message = _('Пользователь успешно изменён')
+        messages.add_message(self.request, messages.SUCCESS, success_message)
         return super().form_valid(form)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 13:11+0300\n"
+"POT-Creation-Date: 2021-07-16 11:17+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,62 +18,98 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: tasks/templates/tasks/base.html:5 tasks/templates/tasks/base.html:9
+#: templates/tasks/base.html:5 templates/tasks/base.html:9
 msgid "Менеджер задач"
 msgstr "Task Manager"
 
-#: tasks/templates/tasks/base.html:17 tasks/templates/tasks/user_list.html:5
+#: templates/tasks/base.html:17 templates/tasks/user_list.html:5
 msgid "Пользователи"
 msgstr "Users"
 
-#: tasks/templates/tasks/base.html:24 tasks/templates/tasks/user_login.html:7
+#: templates/tasks/base.html:24 templates/tasks/user_login.html:6
 msgid "Вход"
 msgstr "Log In"
 
-#: tasks/templates/tasks/base.html:27 tasks/templates/tasks/user_create.html:6
+#: templates/tasks/base.html:27 templates/tasks/user_create.html:6
 msgid "Регистрация"
 msgstr "Sign Up"
 
-#: tasks/templates/tasks/base.html:33
+#: templates/tasks/base.html:33
 msgid "Выход"
 msgstr "Log Out"
 
-#: tasks/templates/tasks/index.html:11 tasks/templates/tasks/index.html:13
+#: templates/tasks/index.html:11 templates/tasks/index.html:13
 msgid "Добро пожаловать"
-msgstr ""
+msgstr "Welcome"
 
-#: tasks/templates/tasks/user_create.html:9
-#, fuzzy
-#| msgid "Регистрация"
+#: templates/tasks/user_create.html:9
 msgid "Зарегистрировать"
 msgstr "Sign Up"
 
-#: tasks/templates/tasks/user_list.html:10
-#, fuzzy
-#| msgid "Пользователи"
+#: templates/tasks/user_delete.html:6
+msgid "Удаление пользователя"
+msgstr "Delete user"
+
+#: templates/tasks/user_delete.html:7
+msgid "Вы уверены, что хотите удалить"
+msgstr "Are you sure you want to delete"
+
+#: templates/tasks/user_delete.html:9 templates/tasks/user_list.html:26
+msgid "Удалить"
+msgstr "Delete"
+
+#: templates/tasks/user_list.html:10
 msgid "Имя пользователя"
-msgstr "Users"
+msgstr "Username"
 
-#: tasks/templates/tasks/user_list.html:11
+#: templates/tasks/user_list.html:11
 msgid "Полное имя"
-msgstr ""
+msgstr "Full name"
 
-#: tasks/templates/tasks/user_list.html:12
+#: templates/tasks/user_list.html:12
 msgid "Дата создания"
-msgstr ""
+msgstr "Creation date"
 
-#: tasks/templates/tasks/user_login.html:10
+#: templates/tasks/user_list.html:13
+msgid "Действие"
+msgstr "Action"
+
+#: templates/tasks/user_list.html:24 templates/tasks/user_update.html:9
+msgid "Изменить"
+msgstr "Edit"
+
+#: templates/tasks/user_login.html:9
 msgid "Войти"
-msgstr ""
+msgstr "Sign In"
 
-#: tasks/views.py:25
+#: templates/tasks/user_update.html:6
+msgid "Изменение пользователя"
+msgstr "User edit"
+
+#: views/user_views.py:27
 msgid "Пользователь успешно зарегистрирован"
 msgstr "You have successfully registered"
 
-#: tasks/views.py:39
+#: views/user_views.py:41
 msgid "Вы залогинены"
 msgstr "You are logged in"
 
-#: tasks/views.py:52
+#: views/user_views.py:54
 msgid "Вы разлогинены"
 msgstr "You are logged out"
+
+#: views/user_views.py:80
+msgid "Пользователь успешно удалён"
+msgstr "User deleted successfully"
+
+#: views/user_views.py:96
+msgid "У вас нет прав для изменения другого пользователя!"
+msgstr "You do not have permission to edit another user!"
+
+#: views/user_views.py:102
+msgid "Вы не авторизованы! Пожалуйста, выполните вход."
+msgstr "You are not authorized! Please sign in."
+
+#: views/user_views.py:108
+msgid "Пользователь успешно изменён"
+msgstr "User changed successfully."
