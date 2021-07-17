@@ -14,16 +14,16 @@
             </tr>
         </thead>
         <tbody>
-            {% for user in object_list %}
+            {% for user in user_list %}
                 <tr>
                     <td>{{ user.id }}</td>
                     <td>{{ user.username }}</td>
                     <td>{{ user.first_name }} {{ user.last_name }}</td>
                     <td>{{ user.date_joined }}</td>
                     <td>
-                        <a href="/users/{{user.id}}/update/">{% translate "Изменить" %}</a>
+                        <a href="{% url 'tasks:user-update' user.id %}"> {% translate "Изменить" %}</a>
                         <br>
-                        <a href="/users/{{user.id}}/delete/">{% translate "Удалить" %}</a>
+                        <a href="{% url 'tasks:user-delete' user.id %}">{% translate "Удалить" %}</a>
                     </td>
                 </tr>
             {% endfor %}
