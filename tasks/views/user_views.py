@@ -10,6 +10,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.forms import UserRegistrationForm
+from tasks.misc import my_get_login_url
 
 
 class IndexView(TemplateView):
@@ -17,6 +18,7 @@ class IndexView(TemplateView):
 
 
 class UserListView(ListView):
+    context_object_name = 'user_list'
     template_name = 'tasks/user_list.html'
     model = User
 
@@ -71,9 +73,7 @@ class UserDeleteView(LoginRequiredMixin, DeleteView):
 
     def get_login_url(self):  # noqa: WPS615
         """Add denied message message fot delete."""
-        denied_message = 'Вы не авторизованы! Пожалуйста, выполните вход.'
-        messages.add_message(self.request, messages.ERROR, _(denied_message))
-        return super().get_login_url()
+        return my_get_login_url(self)
 
     def delete(self, request, *args, **kwargs):
         """Add success message fo delete."""
@@ -97,11 +97,9 @@ class UserUpdateView(LoginRequiredMixin, UpdateView):
         messages.add_message(self.request, messages.ERROR, denied_message)
         return redirect('tasks:user-list')
 
-    def get_login_url(self):  # noqa: WPS615 Found unpythonic getter or setter
-        """Add denied message message fot update."""
-        denied_message = _('Вы не авторизованы! Пожалуйста, выполните вход.')
-        messages.add_message(self.request, messages.ERROR, denied_message)
-        return super().get_login_url()
+    def get_login_url(self):  # noqa: WPS615
+        """Add denied message message fot delete."""
+        return my_get_login_url(self)
 
     def form_valid(self, form):
         """Add success message for update."""
