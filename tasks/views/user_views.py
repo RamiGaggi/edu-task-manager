@@ -60,11 +60,13 @@ class UserDeleteView(MyLoginRequiredMixin, DeleteView):
     template_name = 'tasks/user_delete.html'
     success_url = reverse_lazy('tasks:user-list')
 
-    @add_denied_message_and_redirect
-    def get(self, request, *args, **kwargs):
-        """Handle GET requests: instantiate a blank version of the form."""
+    @add_denied_message_and_redirect(
+        redirect_url='tasks:user-list',
+        message=_('У вас нет прав для изменения другого пользователя!'),
+    )
+    def dispatch(self, request, *args, **kwargs):
         if self.request.user.id == self.kwargs.get('pk'):
-            return super().get(request, *args, **kwargs)
+            return super().dispatch(request, *args, **kwargs)
 
     def delete(self, request, *args, **kwargs):
         """Add success message fo delete."""
@@ -80,11 +82,13 @@ class UserUpdateView(MyLoginRequiredMixin, UpdateView):
     login_url = reverse_lazy('tasks:user-login')
     success_url = reverse_lazy('tasks:user-list')
 
-    @add_denied_message_and_redirect
-    def get(self, request, *args, **kwargs):
-        """Handle GET requests: instantiate a blank version of the form."""
+    @add_denied_message_and_redirect(
+        redirect_url='tasks:user-list',
+        message=_('У вас нет прав для изменения другого пользователя!'),
+    )
+    def dispatch(self, request, *args, **kwargs):
         if self.request.user.id == self.kwargs.get('pk'):
-            return super().get(request, *args, **kwargs)
+            return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
         """Add success message for update."""

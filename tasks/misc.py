@@ -12,11 +12,15 @@ class MyLoginRequiredMixin(LoginRequiredMixin):
         messages.add_message(self.request, messages.ERROR, denied_message)
         return super().get_login_url()
 
-def add_denied_message_and_redirect(get):
-    @functools.wraps(get)
-    def wrapper(self, request, *args, **kwargs):
-        get(self, request, *args, **kwargs)
-        denied_message = _('У вас нет прав для изменения другого пользователя!')
-        messages.add_message(self.request, messages.ERROR, denied_message)
-        return redirect('tasks:user-list')
-    return wrapper
+
+def add_denied_message_and_redirect(redirect_url=None, message=None):
+    def decorator(get):
+        @functools.wraps(get)
+        def wrapper(self, request, *args, **kwargs):
+            response = get(self, request, *args, **kwargs)
+            if response:
+                return response
+            messages.add_message(self.request, messages.ERROR, message)
+            return redirect(redirect_url)
+        return wrapper
+    return decorator
