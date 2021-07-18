@@ -1,16 +1,14 @@
 from django.contrib import messages
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import redirect
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.forms import UserRegistrationForm
-from tasks.misc import my_get_login_url
+from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 
 
 class IndexView(TemplateView):
@@ -57,23 +55,16 @@ class UserLogoutView(LogoutView):
         return response
 
 
-class UserDeleteView(LoginRequiredMixin, DeleteView):
+class UserDeleteView(MyLoginRequiredMixin, DeleteView):
     model = User
     template_name = 'tasks/user_delete.html'
-    login_url = reverse_lazy('tasks:user-login')
     success_url = reverse_lazy('tasks:user-list')
 
+    @add_denied_message_and_redirect
     def get(self, request, *args, **kwargs):
         """Handle GET requests: instantiate a blank version of the form."""
         if self.request.user.id == self.kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
-        denied_message = 'У вас нет прав для изменения другого пользователя!'
-        messages.add_message(self.request, messages.ERROR, _(denied_message))
-        return redirect('tasks:user-list')
-
-    def get_login_url(self):  # noqa: WPS615
-        """Add denied message message fot delete."""
-        return my_get_login_url(self)
 
     def delete(self, request, *args, **kwargs):
         """Add success message fo delete."""
@@ -82,24 +73,18 @@ class UserDeleteView(LoginRequiredMixin, DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-class UserUpdateView(LoginRequiredMixin, UpdateView):
+class UserUpdateView(MyLoginRequiredMixin, UpdateView):
     model = User
     fields = ['first_name', 'last_name', 'username']
     template_name = 'tasks/user_update.html'
     login_url = reverse_lazy('tasks:user-login')
     success_url = reverse_lazy('tasks:user-list')
 
+    @add_denied_message_and_redirect
     def get(self, request, *args, **kwargs):
         """Handle GET requests: instantiate a blank version of the form."""
         if self.request.user.id == self.kwargs.get('pk'):
             return super().get(request, *args, **kwargs)
-        denied_message = _('У вас нет прав для изменения другого пользователя!')
-        messages.add_message(self.request, messages.ERROR, denied_message)
-        return redirect('tasks:user-list')
-
-    def get_login_url(self):  # noqa: WPS615
-        """Add denied message message fot delete."""
-        return my_get_login_url(self)
 
     def form_valid(self, form):
         """Add success message for update."""
