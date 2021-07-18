@@ -1,0 +1,37 @@
+{% extends 'tasks/base.html' %}
+{% load i18n %}
+
+{% block bootstrap4_content %}
+    <h1>{% translate "Задачи" %}</h1>
+    <a class="nav-link" href="{% url 'tasks:task-create' %}">Создать задачу</a>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">{% translate "Имя" %}</th>
+                <th scope="col">{% translate "Статус" %}</th>
+                <th scope="col">{% translate "Автор" %}</th>
+                <th scope="col">{% translate "Исполнитель" %}</th>
+                <th scope="col">{% translate "Дата создания" %}</th>
+                <th scope="col">{% translate "Действие" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in task_list %}
+                <tr>
+                    <td>{{ task.id }}</td>
+                    <td><a href="{% url 'tasks:task' task.id %}">{{ task.name }}</a></td>
+                    <td>{{ task.status }}</td>
+                    <td>{{ task.author }}</td>
+                    <td>{{ task.executor|default_if_none:_("Не назначен") }}</td>
+                    <td>{{ task.created_at }}</td>
+                    <td>
+                        <a href="{% url 'tasks:task-update' task.id %}">{% translate "Изменить" %}</a>
+                        <br>
+                        <a href="{% url 'tasks:task-delete' task.id %}">{% translate "Удалить" %}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
