@@ -22,7 +22,11 @@ urlpatterns = [
     path('tasks', views.TaskListView.as_view(), name='task-list'),
     path('tasks/<int:pk>', views.TaskView.as_view(), name='task'),
     path('tasks/create', views.TaskCreateView.as_view(), name='task-create'),
-    path('tasks/<int:pk>', views.TaskUpdateView.as_view(), name='task-update'),
     path('tasks/<int:pk>/update', views.TaskUpdateView.as_view(), name='task-update'),
     path('tasks/<int:pk>/delete', views.TaskDeleteView.as_view(), name='task-delete'),
+
+    path('labels', views.LabelListView.as_view(), name='label-list'),
+    path('labels/create', views.LabelCreateView.as_view(), name='label-create'),
+    path('labels/<int:pk>/update', views.LabelUpdateView.as_view(), name='label-update'),
+    path('labels/<int:pk>/delete', views.LabelDeleteView.as_view(), name='label-delete'),
 ]

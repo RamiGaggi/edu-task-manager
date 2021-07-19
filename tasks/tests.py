@@ -161,7 +161,6 @@ class TasksViewsTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, self.task)
-        logger.debug(Task.objects.all())
         self.assertEqual(Task.objects.all().count(), 7)  # 6 + 1
         self.assertEqual(Task.objects.get(name='test task').id, 12)  # noqa: E501
 

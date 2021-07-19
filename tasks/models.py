@@ -57,3 +57,11 @@ class Task(TimeStampMixin):
 
     def __str__(self):
         return self.name
+
+
+class Label(TimeStampMixin):
+    name = models.CharField(max_length=256, unique=True, verbose_name=_('Имя'))
+    tasks = models.ManyToManyField(Task)
+
+    def __str__(self):
+        return self.name
