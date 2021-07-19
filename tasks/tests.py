@@ -27,50 +27,50 @@ class TasksUserViewsTests(TestCase):
         }
 
     def test_index(self):
-        response = self.client.get(reverse('tasks:index'))
+        url = reverse('tasks:index')
+        response = self.client.get(url)  # noqa: WPS204 Overused expression
         self.assertEqual(response.status_code, 200)
 
     def test_list(self):
-        response = self.client.get(reverse('tasks:user-list'))
+        url = reverse('tasks:user-list')
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
     def test_registration(self):
         reg_info = self.reg_info
-        response = self.client.get(reverse('tasks:user-create'))
+        url = reverse('tasks:user-create')
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         users = get_user_model().objects.all()
-        self.client.post(reverse('tasks:user-create'), reg_info)
+        self.client.post(url, reg_info)
         self.assertEqual(users.get(username='test3').username, 'test3')
         self.assertEqual(users.count(), 4)  # 3 + 1
 
     def test_login(self):
-        response = self.client.get(reverse('tasks:user-login'))
+        url = reverse('tasks:user-login')
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         credentials = self.credentials
-        login = self.client.post(reverse('tasks:user-login'), credentials)
+        login = self.client.post(url, credentials)
         self.assertEqual(login.status_code, 302)
 
     def test_delete_update(self):
-        response_upd = self.client.get(reverse('tasks:user-update', kwargs={'pk': 77}))  # noqa: E501
-        response_del = self.client.get(reverse('tasks:user-delete', kwargs={'pk': 77}))  # noqa: E501
-        logger.debug(response_upd)
+        url_update = reverse('tasks:user-update', kwargs={'pk': 77})
+        url_delete = reverse('tasks:user-delete', kwargs={'pk': 77})
+        response_upd = self.client.get(url_update)
+        response_del = self.client.get(url_delete)
         self.assertEqual(response_del.status_code, 302)
         self.assertEqual(response_upd.status_code, 302)
 
         # Update and delete for test1 with pk=77 after login.
         self.client.post(reverse('tasks:user-login'), self.credentials)
-        response_upd = self.client.post(
-            reverse('tasks:user-update', kwargs={'pk': 77}),
-            {'username': 'KwaKwa'},
-        )
+        response_upd = self.client.post(url_update, {'username': 'KwaKwa'})
         users = get_user_model().objects.all()
         self.assertEqual(users.get(pk=77).username, 'KwaKwa')
 
-        response_del = self.client.post(
-            reverse('tasks:user-delete', kwargs={'pk': 77}),
-        )
+        response_del = self.client.post(url_delete, kwargs={'pk': 77})
         users = get_user_model().objects.all()
         with self.assertRaises(User.DoesNotExist):
             users.get(pk=77)
@@ -90,7 +90,6 @@ class TasksStatusViewsTests(TestCase):
             reverse('tasks:user-login'),
             self.credentials,
         )
-        self.status = Status
 
     def test_list(self):
         url = reverse('tasks:status-list')
@@ -101,6 +100,7 @@ class TasksStatusViewsTests(TestCase):
         url = reverse('tasks:status-create')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
         self.client.post(url, {'name': 'In Review'})
         self.assertEqual(Status.objects.all().count(), 5)  # 4 + 1
         self.assertEqual(Status.objects.get(name='In Review').name, 'In Review')  # noqa: E501
@@ -109,6 +109,7 @@ class TasksStatusViewsTests(TestCase):
         url = reverse('tasks:status-update', kwargs={'pk': 20})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
         self.client.post(url, {'name': 'Big DEAL'})
         self.assertEqual(Status.objects.get(pk=20).name, 'Big DEAL')
 
@@ -116,6 +117,7 @@ class TasksStatusViewsTests(TestCase):
         url = reverse('tasks:status-delete', kwargs={'pk': 20})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
+
         self.client.post(url)
         with self.assertRaises(Status.DoesNotExist):
             self.assertEqual(Status.objects.get(pk=20))
