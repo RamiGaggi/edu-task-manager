@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from tasks.logger import logger
-from tasks.models import Status
+from tasks.models import Status, Task
 
 logger.info('Running tests for task app')
 
@@ -121,3 +121,63 @@ class TasksStatusViewsTests(TestCase):
         self.client.post(url)
         with self.assertRaises(Status.DoesNotExist):
             self.assertEqual(Status.objects.get(pk=20))
+
+
+class TasksViewsTests(TestCase):
+    """Test status views."""
+
+    fixtures = ['task_data.json']
+
+    def setUp(self):
+        self.credentials = {
+            'username': 'test1',
+            'password': 'http://localhost:8000/',
+        }
+        self.login = self.client.post(
+            reverse('tasks:user-login'),
+            self.credentials,
+        )
+
+        self.task = {
+            'name': 'test task',
+            'description': 'smth',
+            'status': 21,
+            'executor': 79,
+        }
+
+    def test_single(self):
+        url = reverse('tasks:task', kwargs={'pk': 10})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_list(self):
+        url = reverse('tasks:task-list')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_create(self):
+        url = reverse('tasks:task-create')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        self.client.post(url, self.task)
+        logger.debug(Task.objects.all())
+        self.assertEqual(Task.objects.all().count(), 7)  # 6 + 1
+        self.assertEqual(Task.objects.get(name='test task').id, 12)  # noqa: E501
+
+    def test_update(self):
+        url = reverse('tasks:task-update', kwargs={'pk': 10})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        self.client.post(url, self.task)
+        self.assertEqual(Task.objects.get(pk=10).name, 'test task')
+
+    def test_delete(self):
+        url = reverse('tasks:task-delete', kwargs={'pk': 10})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        self.client.post(url)
+        with self.assertRaises(Task.DoesNotExist):
+            self.assertEqual(Task.objects.get(pk=10))
