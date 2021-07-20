@@ -120,7 +120,7 @@ class TasksStatusViewsTests(TestCase):
 
         self.client.post(url)
         with self.assertRaises(Status.DoesNotExist):
-            self.assertEqual(Status.objects.get(pk=20))
+            Status.objects.get(pk=20)
 
 
 class TasksViewsTests(TestCase):
@@ -179,4 +179,4 @@ class TasksViewsTests(TestCase):
 
         self.client.post(url)
         with self.assertRaises(Task.DoesNotExist):
-            self.assertEqual(Task.objects.get(pk=10))
+            Task.objects.get(pk=10)
