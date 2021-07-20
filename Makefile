@@ -27,3 +27,6 @@ collectstatic:
 
 compile_translation:
 	(cd tasks/; django-admin compilemessages)
+
+dump-data:
+	poetry run python manage.py dumpdata --indent 4 -e contenttypes -e auth.Permission -e sessions > tasks/fixtures/dump_data.json
