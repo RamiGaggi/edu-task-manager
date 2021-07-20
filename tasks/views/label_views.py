@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -36,7 +37,12 @@ class LabelDeleteView(MyLoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('tasks:label-list')
 
     def delete(self, request, *args, **kwargs):
-        """Add success message fo delete."""
-        success_message = _('Метка успешно удалена')
-        messages.add_message(self.request, messages.SUCCESS, success_message)
+        tasks_for_label = self.get_object().task_set.all()
+        if tasks_for_label:
+            message = _('Невозможно удалить метку, потому что она используется')
+            messages.add_message(self.request, messages.ERROR, message)
+            return redirect('tasks:label-list')
+
+        message = _('Метка успешно удалена')
+        messages.add_message(self.request, messages.SUCCESS, message)
         return super().delete(request, *args, **kwargs)

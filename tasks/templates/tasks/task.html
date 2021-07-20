@@ -28,6 +28,10 @@
                 <div class="col">{% translate "Дата создания" %}</div>
                 <div class="col">{{ task_info.created_at }}</div>
             </div>
+            <div class="row p-1">
+                <div class="col"><b>{% translate "Метки" %}</b></div>
+            <div class="col"><i>{{ task_info.labels.all|join:", " }}</i></div>
+            </div>
             <hr/>
             <div class="row p-1">
                 <div class="col">

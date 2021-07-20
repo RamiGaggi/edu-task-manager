@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from tasks.logger import logger
-from tasks.models import Status, Task
+from tasks.models import Label, Status, Task
 
 logger.info('Running tests for task app')
 
@@ -180,3 +180,59 @@ class TasksViewsTests(TestCase):
         self.client.post(url)
         with self.assertRaises(Task.DoesNotExist):
             Task.objects.get(pk=10)
+
+
+class TasksLabelTests(TestCase):
+    """Test status views."""
+
+    fixtures = ['label_data.json']
+
+    def setUp(self):
+        self.credentials = {
+            'username': 'test1',
+            'password': 'http://localhost:8000/',
+        }
+        self.login = self.client.post(
+            reverse('tasks:user-login'),
+            self.credentials,
+        )
+
+        self.label = {
+            'name': 'My label',
+        }
+
+    def test_list(self):
+        url = reverse('tasks:label-list')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_create(self):
+        url = reverse('tasks:label-create')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        self.client.post(url, self.label)
+        self.assertEqual(Label.objects.all().count(), 4)  # 3 + 1
+        self.assertEqual(Label.objects.get(name='My label').id, 21)
+
+    def test_update(self):
+        url = reverse('tasks:label-update', kwargs={'pk': 19})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        self.client.post(url, self.label)
+        self.assertEqual(Label.objects.get(pk=19).name, 'My label')
+
+    def test_delete(self):
+        url = reverse('tasks:label-delete', kwargs={'pk': 19})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+        response = self.client.post(url)
+        self.assertEqual(response.status_code, 302)
+        Label.objects.get(pk=19)
+
+        url = reverse('tasks:label-delete', kwargs={'pk': 20})
+        self.client.post(url)
+        with self.assertRaises(Label.DoesNotExist):
+            Label.objects.get(pk=20)

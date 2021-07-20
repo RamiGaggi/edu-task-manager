@@ -5,6 +5,7 @@ from django.utils.translation import gettext as _
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
+from tasks.logger import logger
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 from tasks.models import Task
 
@@ -13,6 +14,11 @@ class TaskView(MyLoginRequiredMixin, DetailView):
     model = Task
     context_object_name = 'task_info'
     template_name = 'tasks/task.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        logger.debug(context['object'].labels.all())
+        return context
 
 
 class TaskListView(MyLoginRequiredMixin, ListView):
@@ -23,10 +29,10 @@ class TaskListView(MyLoginRequiredMixin, ListView):
 
 class TaskCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Task
-    fields = ['name', 'description', 'status', 'executor']
+    fields = ['name', 'description', 'status', 'executor', 'labels']
     template_name = 'tasks/task_create.html'
-    success_message = _('Задача успешно создана')
     success_url = reverse_lazy('tasks:task-list')
+    success_message = _('Задача успешно создана')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -35,10 +41,10 @@ class TaskCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
 
 class TaskUpdateView(MyLoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
+    fields = ['name', 'description', 'status', 'executor', 'labels']
     template_name = 'tasks/task_update.html'
     success_url = reverse_lazy('tasks:task-list')
     success_message = _('Задача успешно изменена')
-    fields = ['name', 'description', 'status', 'executor']
 
 
 class TaskDeleteView(MyLoginRequiredMixin, DeleteView):
