@@ -3,23 +3,24 @@ from django import forms
 from django.utils.translation import gettext as _
 from tasks.models import Label, Status, Task
 
-STATUS_CHOICES = [(status.id, status.name) for status in Status.objects.all()]  # noqa: WPS407, E501
-LABEL_CHOICES = [  # noqa: WPS407
-    (label.id, label.name) for label in Label.objects.all()
-]
-AUTHOR_CHOICES = (
-    (True, 'True'),
-    (0, 'fdghfgh'),
-)
+
+def get_status_choices():
+    """asdas."""
+    return [(status.id, status.name) for status in Status.objects.all()]
+
+
+def get_label_choices():
+    """asdas."""
+    return [(label.id, label.name) for label in Label.objects.all()]
 
 
 class TaskFilter(django_filters.FilterSet):
     status = django_filters.ChoiceFilter(
-        choices=STATUS_CHOICES,
+        choices=get_status_choices(),
         label=_('Статус'),
     )
     labels = django_filters.ChoiceFilter(
-        choices=LABEL_CHOICES,
+        choices=get_label_choices(),
         label=_('Метка'),
     )
     author_id = django_filters.BooleanFilter(
