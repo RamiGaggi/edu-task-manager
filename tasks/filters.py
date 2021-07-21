@@ -3,7 +3,7 @@ from django import forms
 from django.utils.translation import gettext as _
 from tasks.models import Label, Status, Task
 
-STATUS_CHOICES = [(status.id, status.name) for status in Status.objects.all()]  # noqa
+STATUS_CHOICES = [(status.id, status.name) for status in Status.objects.all()]  # noqa: WPS407, E501
 LABEL_CHOICES = [  # noqa: WPS407
     (label.id, label.name) for label in Label.objects.all()
 ]
