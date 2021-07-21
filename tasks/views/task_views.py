@@ -5,7 +5,8 @@ from django.utils.translation import gettext as _
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
-from tasks.logger import logger
+from django_filters.views import FilterView
+from tasks.filters import TaskFilter
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 from tasks.models import Task
 
@@ -15,16 +16,12 @@ class TaskView(MyLoginRequiredMixin, DetailView):
     context_object_name = 'task_info'
     template_name = 'tasks/task.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        logger.debug(context['object'].labels.all())
-        return context
 
-
-class TaskListView(MyLoginRequiredMixin, ListView):
+class TaskListView(MyLoginRequiredMixin, FilterView, ListView):
     model = Task
     context_object_name = 'task_list'
     template_name = 'tasks/task_list.html'
+    filterset_class = TaskFilter
 
 
 class TaskCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
