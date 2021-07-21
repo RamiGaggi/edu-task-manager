@@ -4,23 +4,19 @@ from django.utils.translation import gettext as _
 from tasks.models import Label, Status, Task
 
 
-def get_status_choices():
-    """asdas."""
-    return [(status.id, status.name) for status in Status.objects.all()]
-
-
-def get_label_choices():
-    """asdas."""
-    return [(label.id, label.name) for label in Label.objects.all()]
-
-
 class TaskFilter(django_filters.FilterSet):
+    def __init__(self, *args, **kwargs):
+        """Update filters after creating status/labels."""
+        super().__init__(*args, **kwargs)
+        self.filters['status'].extra['choices'] = [(status.id, status.name) for status in Status.objects.all()]  # noqa: E501
+        self.filters['labels'].extra['choices'] = [(label.id, label.name) for label in Label.objects.all()]  # noqa: E501
+
     status = django_filters.ChoiceFilter(
-        choices=get_status_choices(),
+        choices=[],
         label=_('Статус'),
     )
     labels = django_filters.ChoiceFilter(
-        choices=get_label_choices(),
+        choices=[],
         label=_('Метка'),
     )
     author_id = django_filters.BooleanFilter(
