@@ -459,7 +459,7 @@ name = "psycopg2"
 version = "2.9.1"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [[package]]
@@ -467,7 +467,7 @@ name = "psycopg2-binary"
 version = "2.9.1"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
-optional = true
+optional = false
 python-versions = ">=3.6"
 
 [[package]]
@@ -720,14 +720,10 @@ python-versions = ">=3.5, <4"
 [package.extras]
 brotli = ["brotli"]
 
-[extras]
-psycopg2 = ["psycopg2"]
-psycopg2-binary = ["psycopg2-binary"]
-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<4.0"
-content-hash = "343892c78a63c7b2e6ffd8f75014070cdb017fd40927a979d58a572679960d60"
+content-hash = "bf00925ecba49fefdb7b9b08a2d5c68d88c340ce3150ab49cb3f6f2133848c42"
 
 [metadata.files]
 asgiref = [
