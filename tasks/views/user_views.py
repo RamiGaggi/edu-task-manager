@@ -1,5 +1,4 @@
 from django.contrib import messages
-from django.contrib.auth.models import User
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse, reverse_lazy
@@ -9,6 +8,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.forms import UserRegistrationForm, UserUpdateForm
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
+from tasks.models import MyUser
 
 
 class IndexView(TemplateView):
@@ -18,7 +18,7 @@ class IndexView(TemplateView):
 class UserListView(ListView):
     context_object_name = 'user_list'
     template_name = 'tasks/user_list.html'
-    model = User
+    model = MyUser
 
 
 class UserRegistrationView(SuccessMessageMixin, CreateView):
@@ -33,7 +33,7 @@ class UserRegistrationView(SuccessMessageMixin, CreateView):
 
 class UserLoginView(SuccessMessageMixin, LoginView):
     template_name = 'tasks/user_login.html'
-    model = User
+    model = MyUser
     fields = [
         'username',
         'password',
@@ -53,7 +53,7 @@ class UserLogoutView(LogoutView):
 
 
 class UserDeleteView(MyLoginRequiredMixin, DeleteView):
-    model = User
+    model = MyUser
     template_name = 'tasks/user_delete.html'
     success_url = reverse_lazy('tasks:user-list')
 
@@ -73,7 +73,7 @@ class UserDeleteView(MyLoginRequiredMixin, DeleteView):
 
 
 class UserUpdateView(MyLoginRequiredMixin, UpdateView):
-    model = User
+    model = MyUser
     form_class = UserUpdateForm
     template_name = 'tasks/user_update.html'
     login_url = reverse_lazy('tasks:user-login')

@@ -1,9 +1,8 @@
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from tasks.logger import logger
-from tasks.models import Label, Status, Task
+from tasks.models import Label, MyUser, Status, Task
 
 logger.info('Running tests for task app')
 
@@ -11,7 +10,7 @@ logger.info('Running tests for task app')
 class TasksUserViewsTests(TestCase):
     """Test views for user."""
 
-    fixtures = ['user_data.json']
+    fixtures = ['data.json']
 
     def setUp(self):
         self.reg_info = {
@@ -61,8 +60,8 @@ class TasksUserViewsTests(TestCase):
         self.assertEqual(login.status_code, 302)
 
     def test_delete_update(self):
-        url_update = reverse('tasks:user-update', kwargs={'pk': 77})
-        url_delete = reverse('tasks:user-delete', kwargs={'pk': 77})
+        url_update = reverse('tasks:user-update', kwargs={'pk': 3})
+        url_delete = reverse('tasks:user-delete', kwargs={'pk': 3})
         response_upd = self.client.get(url_update)
         response_del = self.client.get(url_delete)
         self.assertEqual(response_del.status_code, 302)
@@ -75,19 +74,19 @@ class TasksUserViewsTests(TestCase):
             {'username': 'KwaKwa', 'password1': 'levox3fgv', 'password2': 'levox3fgv'},  # noqa: E501
         )
         users = get_user_model().objects.all()
-        self.assertEqual(users.get(pk=77).username, 'KwaKwa')
+        self.assertEqual(users.get(pk=3).username, 'KwaKwa')
 
         self.client.post(reverse('tasks:user-login'), self.upd_credentials)
-        response_del = self.client.post(url_delete, kwargs={'pk': 77})
+        response_del = self.client.post(url_delete, kwargs={'pk': 3})
         users = get_user_model().objects.all()
-        with self.assertRaises(User.DoesNotExist):
-            users.get(pk=77)
+        with self.assertRaises(MyUser.DoesNotExist):
+            users.get(pk=3)
 
 
 class TasksStatusViewsTests(TestCase):
     """Test status views."""
 
-    fixtures = ['status_data.json']
+    fixtures = ['data.json']
 
     def setUp(self):
         self.credentials = {
@@ -111,30 +110,30 @@ class TasksStatusViewsTests(TestCase):
 
         self.client.post(url, {'name': 'In Review'})
         self.assertEqual(Status.objects.all().count(), 5)  # 4 + 1
-        self.assertEqual(Status.objects.get(name='In Review').name, 'In Review')  # noqa: E501
+        self.assertEqual(Status.objects.get(pk=2).id, 2)
 
     def test_update(self):
-        url = reverse('tasks:status-update', kwargs={'pk': 20})
+        url = reverse('tasks:status-update', kwargs={'pk': 3})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, {'name': 'Big DEAL'})
-        self.assertEqual(Status.objects.get(pk=20).name, 'Big DEAL')
+        self.assertEqual(Status.objects.get(pk=3).name, 'Big DEAL')
 
     def test_delete(self):
-        url = reverse('tasks:status-delete', kwargs={'pk': 20})
+        url = reverse('tasks:status-delete', kwargs={'pk': 3})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url)
         with self.assertRaises(Status.DoesNotExist):
-            Status.objects.get(pk=20)
+            Status.objects.get(pk=3)
 
 
 class TasksViewsTests(TestCase):
     """Test status views."""
 
-    fixtures = ['task_data.json']
+    fixtures = ['data.json']
 
     def setUp(self):
         self.credentials = {
@@ -149,12 +148,12 @@ class TasksViewsTests(TestCase):
         self.task = {
             'name': 'test task',
             'description': 'smth',
-            'status': 21,
-            'executor': 79,
+            'status': 3,
+            'executor': 2,
         }
 
     def test_single(self):
-        url = reverse('tasks:task', kwargs={'pk': 10})
+        url = reverse('tasks:task', kwargs={'pk': 3})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
@@ -169,31 +168,31 @@ class TasksViewsTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, self.task)
-        self.assertEqual(Task.objects.all().count(), 7)  # 6 + 1
-        self.assertEqual(Task.objects.get(name='test task').id, 12)  # noqa: E501
+        self.assertEqual(Task.objects.all().count(), 4)  # 3 + 1
+        self.assertEqual(Task.objects.get(name='test task').id, 5)
 
     def test_update(self):
-        url = reverse('tasks:task-update', kwargs={'pk': 10})
+        url = reverse('tasks:task-update', kwargs={'pk': 4})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, self.task)
-        self.assertEqual(Task.objects.get(pk=10).name, 'test task')
+        self.assertEqual(Task.objects.get(pk=4).name, 'test task')
 
     def test_delete(self):
-        url = reverse('tasks:task-delete', kwargs={'pk': 10})
+        url = reverse('tasks:task-delete', kwargs={'pk': 4})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url)
         with self.assertRaises(Task.DoesNotExist):
-            Task.objects.get(pk=10)
+            Task.objects.get(pk=4)
 
 
 class TasksLabelTests(TestCase):
     """Test status views."""
 
-    fixtures = ['label_data.json']
+    fixtures = ['data.json']
 
     def setUp(self):
         self.credentials = {
@@ -220,27 +219,27 @@ class TasksLabelTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, self.label)
-        self.assertEqual(Label.objects.all().count(), 4)  # 3 + 1
-        self.assertEqual(Label.objects.get(name='My label').id, 21)
+        self.assertEqual(Label.objects.all().count(), 5)  # 4 + 1
+        self.assertEqual(Label.objects.get(name='My label').id, 5)
 
     def test_update(self):
-        url = reverse('tasks:label-update', kwargs={'pk': 19})
+        url = reverse('tasks:label-update', kwargs={'pk': 2})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         self.client.post(url, self.label)
-        self.assertEqual(Label.objects.get(pk=19).name, 'My label')
+        self.assertEqual(Label.objects.get(pk=2).name, 'My label')
 
     def test_delete(self):
-        url = reverse('tasks:label-delete', kwargs={'pk': 19})
+        url = reverse('tasks:label-delete', kwargs={'pk': 2})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
 
         response = self.client.post(url)
         self.assertEqual(response.status_code, 302)
-        Label.objects.get(pk=19)
+        Label.objects.get(pk=2)
 
-        url = reverse('tasks:label-delete', kwargs={'pk': 20})
+        url = reverse('tasks:label-delete', kwargs={'pk': 4})
         self.client.post(url)
         with self.assertRaises(Label.DoesNotExist):
-            Label.objects.get(pk=20)
+            Label.objects.get(pk=4)

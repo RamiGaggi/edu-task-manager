@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext as _
 
@@ -15,6 +15,11 @@ class TimeStampMixin(models.Model):
 
     class Meta:
         abstract = True
+
+
+class MyUser(AbstractUser):
+    def __str__(self):
+        return ' '.join([self.first_name, self.last_name])
 
 
 class Status(TimeStampMixin):
@@ -43,7 +48,7 @@ class Task(TimeStampMixin):
         verbose_name=_('Описание'),
     )
     author = models.ForeignKey(
-        User,
+        MyUser,
         on_delete=models.CASCADE,
         verbose_name=_('Автор'),
         related_name='author_id',
@@ -54,7 +59,7 @@ class Task(TimeStampMixin):
         verbose_name=_('Статус'),
     )
     executor = models.ForeignKey(
-        User,
+        MyUser,
         on_delete=models.CASCADE,
         null=True,
         blank=True,

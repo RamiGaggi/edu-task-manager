@@ -1,0 +1,174 @@
+[
+{
+    "model": "tasks.myuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$WDxoxMXiTSkNFIJsB1jm0V$9LJZkNcnC7M1o8PRk5s3FzmoQnvM7YjagEmcl336LRg=",
+        "last_login": "2021-07-22T21:47:45.189Z",
+        "is_superuser": true,
+        "username": "Ramil",
+        "first_name": "Ramil",
+        "last_name": "Gadzhiev",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-07-22T21:07:06.758Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tasks.myuser",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$04xSzLRm14vimIzdQLLJxI$lAKvjlVKk0vk+gbCA8WW7ZFufYoWAcTCw73Cb6wdzKM=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Caramba",
+        "first_name": "Ivan",
+        "last_name": "Ivanov",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-07-22T21:25:25.095Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tasks.myuser",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$5xY99EkxwEKYFDPR5Srv0X$FwXOXXsG23x73Qozp7DvJhv/uSGiYvn0gnHsM25elG4=",
+        "last_login": "2021-07-22T21:49:29.483Z",
+        "is_superuser": false,
+        "username": "test1",
+        "first_name": "Vasya",
+        "last_name": "Pupkin",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-07-22T21:26:20.599Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "tasks.status",
+    "pk": 1,
+    "fields": {
+        "created_at": "2021-07-22T21:11:20.071Z",
+        "updated_at": "2021-07-22T21:11:20.071Z",
+        "name": "Новый"
+    }
+},
+{
+    "model": "tasks.status",
+    "pk": 2,
+    "fields": {
+        "created_at": "2021-07-22T21:11:24.881Z",
+        "updated_at": "2021-07-22T21:11:24.881Z",
+        "name": "В работе"
+    }
+},
+{
+    "model": "tasks.status",
+    "pk": 3,
+    "fields": {
+        "created_at": "2021-07-22T21:11:30.346Z",
+        "updated_at": "2021-07-22T21:11:30.346Z",
+        "name": "На тестировании"
+    }
+},
+{
+    "model": "tasks.status",
+    "pk": 4,
+    "fields": {
+        "created_at": "2021-07-22T21:11:35.001Z",
+        "updated_at": "2021-07-22T21:11:35.001Z",
+        "name": "На ревью"
+    }
+},
+{
+    "model": "tasks.label",
+    "pk": 1,
+    "fields": {
+        "created_at": "2021-07-22T21:11:40.441Z",
+        "updated_at": "2021-07-22T21:11:40.441Z",
+        "name": "Срочно"
+    }
+},
+{
+    "model": "tasks.label",
+    "pk": 2,
+    "fields": {
+        "created_at": "2021-07-22T21:11:44.468Z",
+        "updated_at": "2021-07-22T21:11:44.468Z",
+        "name": "2021"
+    }
+},
+{
+    "model": "tasks.label",
+    "pk": 3,
+    "fields": {
+        "created_at": "2021-07-22T21:11:51.071Z",
+        "updated_at": "2021-07-22T21:11:51.071Z",
+        "name": "SUP"
+    }
+},
+{
+    "model": "tasks.label",
+    "pk": 4,
+    "fields": {
+        "created_at": "2021-07-22T21:48:54.181Z",
+        "updated_at": "2021-07-22T21:48:54.181Z",
+        "name": "Bez"
+    }
+},
+{
+    "model": "tasks.task",
+    "pk": 1,
+    "fields": {
+        "created_at": "2021-07-22T21:12:14.246Z",
+        "updated_at": "2021-07-22T21:12:14.246Z",
+        "name": "Первая задача",
+        "description": "",
+        "author": 1,
+        "status": 1,
+        "executor": 1,
+        "labels": [
+            1
+        ]
+    }
+},
+{
+    "model": "tasks.task",
+    "pk": 3,
+    "fields": {
+        "created_at": "2021-07-22T21:37:08.585Z",
+        "updated_at": "2021-07-22T21:37:08.585Z",
+        "name": "Задача",
+        "description": "",
+        "author": 1,
+        "status": 1,
+        "executor": 3,
+        "labels": [
+            2
+        ]
+    }
+},
+{
+    "model": "tasks.task",
+    "pk": 4,
+    "fields": {
+        "created_at": "2021-07-22T21:49:48.830Z",
+        "updated_at": "2021-07-22T21:49:48.830Z",
+        "name": "Base task",
+        "description": "",
+        "author": 3,
+        "status": 2,
+        "executor": 3,
+        "labels": []
+    }
+}
+]
