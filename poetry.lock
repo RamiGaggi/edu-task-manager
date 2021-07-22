@@ -726,8 +726,8 @@ psycopg2-binary = ["psycopg2-binary"]
 
 [metadata]
 lock-version = "1.1"
-python-versions = ">=3.8,<3.8.4"
-content-hash = "93bfb907e62224b591613b9fb4aaf5bd8594c7b342b1b0cfb42c4e1ee56d563a"
+python-versions = ">=3.8,<4.0"
+content-hash = "343892c78a63c7b2e6ffd8f75014070cdb017fd40927a979d58a572679960d60"
 
 [metadata.files]
 asgiref = [
