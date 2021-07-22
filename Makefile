@@ -1,5 +1,5 @@
 install:
-	poetry install --extras psycopg2-binary
+	poetry install
 
 runserver:
 	poetry run python manage.py runserver 0.0.0.0:8000
