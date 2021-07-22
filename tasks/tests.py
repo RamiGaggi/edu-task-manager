@@ -25,6 +25,10 @@ class TasksUserViewsTests(TestCase):
             'username': 'test1',
             'password': 'http://localhost:8000/',
         }
+        self.upd_credentials = {
+            'username': 'KwaKwa',
+            'password': 'levox3fgv',
+        }
 
     def test_index(self):
         url = reverse('tasks:index')
@@ -66,10 +70,14 @@ class TasksUserViewsTests(TestCase):
 
         # Update and delete for test1 with pk=77 after login.
         self.client.post(reverse('tasks:user-login'), self.credentials)
-        response_upd = self.client.post(url_update, {'username': 'KwaKwa'})
+        response_upd = self.client.post(
+            url_update,
+            {'username': 'KwaKwa', 'password1': 'levox3fgv', 'password2': 'levox3fgv'},  # noqa: E501
+        )
         users = get_user_model().objects.all()
         self.assertEqual(users.get(pk=77).username, 'KwaKwa')
 
+        self.client.post(reverse('tasks:user-login'), self.upd_credentials)
         response_del = self.client.post(url_delete, kwargs={'pk': 77})
         users = get_user_model().objects.all()
         with self.assertRaises(User.DoesNotExist):

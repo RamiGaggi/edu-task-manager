@@ -7,7 +7,7 @@ from django.utils.translation import gettext as _
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
-from tasks.forms import UserRegistrationForm
+from tasks.forms import UserRegistrationForm, UserUpdateForm
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 
 
@@ -74,7 +74,7 @@ class UserDeleteView(MyLoginRequiredMixin, DeleteView):
 
 class UserUpdateView(MyLoginRequiredMixin, UpdateView):
     model = User
-    fields = ['first_name', 'last_name', 'username']
+    form_class = UserUpdateForm
     template_name = 'tasks/user_update.html'
     login_url = reverse_lazy('tasks:user-login')
     success_url = reverse_lazy('tasks:user-list')
