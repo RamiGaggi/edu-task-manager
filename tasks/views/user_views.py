@@ -38,11 +38,8 @@ class UserLoginView(SuccessMessageMixin, LoginView):
         'username',
         'password',
     ]
+    extra_context = {'next': reverse_lazy('tasks:index')}
     success_message = _('Вы залогинены')
-
-    def get_success_url(self):
-        """Get url after registration."""
-        return reverse('tasks:index')
 
 
 class UserLogoutView(LogoutView):

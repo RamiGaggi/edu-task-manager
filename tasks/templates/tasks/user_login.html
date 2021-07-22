@@ -6,6 +6,7 @@
     <h1>{% translate "Вход" %}</h1>
     <form method="post">{% csrf_token %}
         {% bootstrap_form form %}
+        <input type="hidden" name="next" value="{{ next }}" />
         <input class="btn btn-primary" type="submit" value="{% translate "Войти" %}">
     </form>
 {% endblock %}
