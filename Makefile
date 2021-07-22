@@ -8,7 +8,7 @@ lint:
 	poetry run flake8
 
 check:
-	poetry run python -m task_manager_site.settings
+	poetry run python -m task_manage.settings
 
 test:
 	poetry run python manage.py test
