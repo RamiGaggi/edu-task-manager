@@ -4,6 +4,7 @@
 .devcontainer/
 __pycache__/
 htmlcov/
+/staticfiles
 drafts.py
 notes.txt
 .favorites.json
