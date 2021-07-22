@@ -66,7 +66,7 @@ class Task(TimeStampMixin):
         related_name='executor_id',
         verbose_name=_('Исполнитель'),
     )
-    labels = models.ManyToManyField(Label, blank=True)
+    labels = models.ManyToManyField(Label, blank=True, verbose_name=_('Метки'))
 
     def __str__(self):
         return self.name
