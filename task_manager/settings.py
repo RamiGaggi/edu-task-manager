@@ -107,13 +107,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
 }
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 
 if DATABASE_URL:
-    DATABASES['default'] = dj_database_url.parse(os.getenv('DATABASE_URL'), conn_max_age=CONN_MAX_AGE)
+    DATABASES['default'] = dj_database_url.parse(
+        os.getenv('DATABASE_URL'),
+        conn_max_age=CONN_MAX_AGE,
+    )
 
 
 # Password validation
@@ -142,8 +145,7 @@ LANGUAGE_CODE = 'ru-ru'
 
 LANGUAGES = [
     ('ru', 'Russian'),
-    ('en','English'),
-    
+    ('en', 'English'),
 ]
 
 TIME_ZONE = 'Europe/Moscow'
