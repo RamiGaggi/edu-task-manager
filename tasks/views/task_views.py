@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
@@ -29,7 +30,7 @@ class TaskCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
     fields = ['name', 'description', 'status', 'executor', 'labels']
     template_name = 'tasks/task_create.html'
     success_url = reverse_lazy('tasks:task-list')
-    success_message = _('Задача успешно создана')
+    success_message = gettext_lazy('Задача успешно создана')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -41,7 +42,7 @@ class TaskUpdateView(MyLoginRequiredMixin, SuccessMessageMixin, UpdateView):
     fields = ['name', 'description', 'status', 'executor', 'labels']
     template_name = 'tasks/task_update.html'
     success_url = reverse_lazy('tasks:task-list')
-    success_message = _('Задача успешно изменена')
+    success_message = gettext_lazy('Задача успешно изменена')
 
 
 class TaskDeleteView(MyLoginRequiredMixin, DeleteView):

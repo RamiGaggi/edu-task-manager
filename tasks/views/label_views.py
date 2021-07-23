@@ -3,6 +3,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.misc import MyLoginRequiredMixin
@@ -19,7 +20,7 @@ class LabelCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Label
     fields = ['name']
     template_name = 'tasks/label_create.html'
-    success_message = _('Метка успешно создана')
+    success_message = gettext_lazy('Метка успешно создана')
     success_url = reverse_lazy('tasks:label-list')
 
 
@@ -27,7 +28,7 @@ class LabelUpdateView(MyLoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Label
     template_name = 'tasks/label_update.html'
     success_url = reverse_lazy('tasks:label-list')
-    success_message = _('Метка успешно изменена')
+    success_message = gettext_lazy('Метка успешно изменена')
     fields = ['name']
 
 
