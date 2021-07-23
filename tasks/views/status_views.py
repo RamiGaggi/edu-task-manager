@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.misc import MyLoginRequiredMixin
@@ -18,7 +19,7 @@ class StatusCreateView(MyLoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Status
     fields = ['name']
     template_name = 'tasks/status_create.html'
-    success_message = _('Статус успешно создан')
+    success_message = gettext_lazy('Статус успешно создан')
 
     def get_success_url(self):
         """Get url after registration."""
@@ -29,7 +30,7 @@ class StatusUpdateView(MyLoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Status
     template_name = 'tasks/status_update.html'
     success_url = reverse_lazy('tasks:status-list')
-    success_message = _('Статус успешно изменён')
+    success_message = gettext_lazy('Статус успешно изменён')
     fields = ['name']
 
 
