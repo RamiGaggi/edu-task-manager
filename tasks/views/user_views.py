@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
@@ -24,7 +25,7 @@ class UserListView(ListView):
 class UserRegistrationView(SuccessMessageMixin, CreateView):
     form_class = UserRegistrationForm
     template_name = 'tasks/user_create.html'
-    success_message = _('Пользователь успешно зарегистрирован')
+    success_message = gettext_lazy('Пользователь успешно зарегистрирован')
 
     def get_success_url(self):
         """Get url after registration."""
