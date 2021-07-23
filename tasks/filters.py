@@ -9,19 +9,23 @@ class TaskFilter(django_filters.FilterSet):
         """Update filters after creating status/labels."""
         super().__init__(*args, **kwargs)
         self.filters['status'].extra['choices'] = [(status.id, status.name) for status in Status.objects.all()]  # noqa: E501
+        self.filters['status']._label = _('Статус')
         self.filters['labels'].extra['choices'] = [(label.id, label.name) for label in Label.objects.all()]  # noqa: E501
+        self.filters['labels']._label = _('Метка')
+        self.filters['author_id']._label = _('Только свои задачи')
+        self.filters['executor']._label = _('Исполнитель')
 
     status = django_filters.ChoiceFilter(
         choices=[],
-        label=_('Статус'),
+        label='',
     )
     labels = django_filters.ChoiceFilter(
         choices=[],
-        label=_('Метка'),
+        label='',
     )
     author_id = django_filters.BooleanFilter(
         method='filter_current_user_tasks',
-        label=_('Только свои задачи'),
+        label='',
         widget=forms.CheckboxInput,
     )
 

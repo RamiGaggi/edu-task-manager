@@ -39,7 +39,11 @@ class UserLoginView(SuccessMessageMixin, LoginView):
         'password',
     ]
     extra_context = {'next': reverse_lazy('tasks:index')}
-    success_message = _('Вы залогинены')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.add_message(self.request, messages.INFO, _('Вы залогинены'))
+        return response
 
 
 class UserLogoutView(LogoutView):
