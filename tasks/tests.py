@@ -71,7 +71,7 @@ class TasksUserViewsTests(TestCase):
         self.client.post(reverse('tasks:user-login'), self.credentials)
         response_upd = self.client.post(
             url_update,
-            {'username': 'KwaKwa', 'password1': 'levox3fgv', 'password2': 'levox3fgv'},  # noqa: E501
+            {'first_name': 'Ivan', 'last_name': 'Ivanov', 'username': 'KwaKwa', 'password1': 'levox3fgv', 'password2': 'levox3fgv'},  # noqa: E501
         )
         users = get_user_model().objects.all()
         self.assertEqual(users.get(pk=3).username, 'KwaKwa')

@@ -5,8 +5,14 @@ from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 from tasks.models import MyUser
 
+FIRST_NAME = forms.CharField(label=_('Имя'), max_length=150)
+LAST_NAME = forms.CharField(label=_('Фамилия'), max_length=150)
+
 
 class UserRegistrationForm(UserCreationForm):
+    first_name = FIRST_NAME
+    last_name = LAST_NAME
+
     class Meta:
         model = MyUser
         fields = [
@@ -17,7 +23,6 @@ class UserRegistrationForm(UserCreationForm):
 
 
 class UserUpdateForm(forms.ModelForm):
-
     password1 = forms.CharField(
         label=_('Пароль'),
         strip=False,
@@ -30,6 +35,9 @@ class UserUpdateForm(forms.ModelForm):
         strip=False,
         help_text=_('Для подтверждения введите, пожалуйста, пароль ещё раз.'),
     )
+
+    first_name = FIRST_NAME
+    last_name = LAST_NAME
 
     def validation(self, cleaned_data):
         password1 = self.cleaned_data.get('password1')
