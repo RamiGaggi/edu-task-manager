@@ -58,7 +58,7 @@ class TaskDeleteView(MyLoginRequiredMixin, DeleteView):
 
     @add_denied_message_and_redirect(
         redirect_url='tasks:task-list',
-        message=_('Задачу может удалить только её автор'),
+        message=gettext_lazy('Задачу может удалить только её автор'),
     )
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.id == self.get_object().author.id:
