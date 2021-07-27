@@ -3,7 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse, reverse_lazy
 from django.utils.translation import gettext as _
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext_lazy as _lazy
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
@@ -25,7 +25,7 @@ class UserListView(ListView):
 class UserRegistrationView(SuccessMessageMixin, CreateView):
     form_class = UserRegistrationForm
     template_name = 'tasks/user_create.html'
-    success_message = gettext_lazy('Пользователь успешно зарегистрирован')
+    success_message = _lazy('Пользователь успешно зарегистрирован')
 
     def get_success_url(self):
         """Get url after registration."""
@@ -64,7 +64,7 @@ class UserDeleteView(MyLoginRequiredMixin, DeleteView):
 
     @add_denied_message_and_redirect(
         redirect_url='tasks:user-list',
-        message=_('У вас нет прав для изменения другого пользователя!'),
+        message=_lazy('У вас нет прав для изменения другого пользователя!'),
     )
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.id == self.kwargs.get('pk'):
@@ -86,7 +86,7 @@ class UserUpdateView(MyLoginRequiredMixin, UpdateView):
 
     @add_denied_message_and_redirect(
         redirect_url='tasks:user-list',
-        message=_('У вас нет прав для изменения другого пользователя!'),
+        message=_lazy('У вас нет прав для изменения другого пользователя!'),
     )
     def dispatch(self, request, *args, **kwargs):
         if self.request.user.id == self.kwargs.get('pk'):

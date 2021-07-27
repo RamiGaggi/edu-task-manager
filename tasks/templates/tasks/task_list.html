@@ -9,8 +9,13 @@
     <a class="nav-link" href="{% url 'tasks:task-create' %}">{% translate "Создать задачу" %}</a>
     <div class="card border-info mb-3">    
         <div class="card-body bg-light">
-            <form class="form-inline center mx-3" method="get">
-                {% bootstrap_form filter.form %}
+            <form class="form-inline center mx-5" method="get">
+                {% for field in filter.form %}
+                    <div class="form-group">
+                        <label for="{{ field.name }}">{{ field.label }}</label>
+                        <div class="ml-2 mr-3">{{ field }}</div>
+                    </div>
+                {% endfor %}
                 <input class="btn btn-primary" type="submit" value="{% translate "Показать" %}">
             </form>
         </div>
