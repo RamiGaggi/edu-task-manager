@@ -11,7 +11,7 @@ check:
 	poetry run python -m task_manage.settings
 
 test:
-	poetry run python manage.py test
+	poetry run python manage.py test tasks
 
 test-coverage:
 	poetry run coverage run manage.py test
