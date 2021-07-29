@@ -4,51 +4,36 @@
     {% load i18n %}
     {% get_current_language as LANGUAGE_CODE %}
 {% endif %}
-<html lang="{{ LANGUAGE_CODE|default:'ru_ru' }}">
 
-<head>
+<html lang="{{ LANGUAGE_CODE|default:'ru-ru' }}">
+    <head>
+        <!-- Required meta tags  and icon-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" type="image/png" href="{% static 'img/book.ico' %}"/>
 
-    <!-- Required meta tags  and icon-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/book.ico' %}"/>
+        <!-- Page title -->
+        <title>{% block bootstrap4_title %}{% block title %}{% endblock %}{% endblock %}</title>
 
+        <!-- Bootstrap CSS -->
+        {% bootstrap_css %}
 
-    <!-- Page title -->
-    <title>{% block bootstrap4_title %}{% block title %}{% endblock %}{% endblock %}</title>
+        <!-- Bootstrap JavaScript if it is in head -->
+        {% if not 'javascript_in_head'|bootstrap_setting %}
+            {% bootstrap_javascript jquery='full'%}
+        {% endif %}
+        {% block bootstrap4_extra_head %}{% endblock %}
+    </head>
 
-    <!-- Bootstrap CSS -->
-    {% bootstrap_css %}
-
-    <!-- Bootstrap JavaScript if it is in head -->
-    {% if 'javascript_in_head'|bootstrap_setting %}
-        {% bootstrap_javascript jquery='full'%}
-    {% endif %}
-    {% block bootstrap4_extra_head %}{% endblock %}
-
-</head>
-
-<body>
-{% block bootstrap4_before_content %}{% endblock %}
-
-<div class="container-fluid">
-    <div class="container wrapper flex-grow-1">
-        {% block bootstrap4_content %}{% endblock %}
-    </div>
-</div>
-
-{% block bootstrap4_after_content %}{% endblock %}
-
-
-
-
-<!-- Bootstrap JavaScript if it is in body -->
-{% if not 'javascript_in_head'|bootstrap_setting %}
-    {% bootstrap_javascript jquery='full'%}
-{% endif %}
-{% block bootstrap4_extra_script %}{% endblock %}
-
-</body>
-
+    <body>
+        {% block bootstrap4_before_content %}{% endblock %}
+        
+        <div class="container-fluid">
+            <div class="container wrapper flex-grow-1">
+                {% block bootstrap4_content %}{% endblock %}
+            </div>
+        </div>
+        
+        {% block bootstrap4_after_content %}{% endblock %}
+    </body>
 </html>
-
