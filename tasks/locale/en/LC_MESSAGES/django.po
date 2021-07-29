@@ -37,7 +37,7 @@ msgstr "Only my tasks"
 #: templates/tasks/label_list.html:11 templates/tasks/status_list.html:11
 #: templates/tasks/task_list.html:27
 msgid "Имя"
-msgstr "First name"
+msgstr "Name"
 
 #: forms.py:9
 msgid "Фамилия"
