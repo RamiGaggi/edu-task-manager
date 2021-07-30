@@ -31,7 +31,7 @@ logging.basicConfig(
     level=logging.DEBUG,
     filename=os.path.join(BASE_DIR, 'logs/task_manager.log'),
     filemode='a',
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     datefmt='%H:%M:%S',
 )
 
