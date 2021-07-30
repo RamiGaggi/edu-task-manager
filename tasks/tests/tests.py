@@ -1,11 +1,15 @@
+import logging
+import sys
+
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
-from tasks.logger import logger
 from tasks.models import Label, MyUser, Status, Task
 from tasks.tests.base import TaskMixinTest
 
-logger.info('Running tests for task app')
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 class TasksUserViewsTests(TaskMixinTest, TestCase):

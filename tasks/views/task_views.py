@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
@@ -10,6 +13,10 @@ from django_filters.views import FilterView
 from tasks.filters import TaskFilter
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 from tasks.models import Task
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 class TaskView(MyLoginRequiredMixin, DetailView):

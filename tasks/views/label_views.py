@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import redirect
@@ -8,6 +11,10 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.misc import MyLoginRequiredMixin
 from tasks.models import Label
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 class LabelListView(MyLoginRequiredMixin, ListView):

@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
@@ -10,6 +13,10 @@ from django.views.generic.list import ListView
 from tasks.forms import UserRegistrationForm, UserUpdateForm
 from tasks.misc import MyLoginRequiredMixin, add_denied_message_and_redirect
 from tasks.models import MyUser
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 class IndexView(TemplateView):

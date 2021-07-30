@@ -1,3 +1,6 @@
+import logging
+import sys
+
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse, reverse_lazy
@@ -7,6 +10,10 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.list import ListView
 from tasks.misc import MyLoginRequiredMixin
 from tasks.models import Status
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 class StatusListView(MyLoginRequiredMixin, ListView):
