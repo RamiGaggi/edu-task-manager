@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-29 16:48+0300\n"
+"POT-Creation-Date: 2021-07-30 12:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,44 +81,44 @@ msgstr "Description"
 msgid "Автор"
 msgstr "Author"
 
-#: models.py:69 templates/tasks/base.html:23 templates/tasks/label_list.html:5
+#: models.py:69 templates/tasks/base.html:24 templates/tasks/label_list.html:5
 #: templates/tasks/task.html:32
 msgid "Метки"
 msgstr "Labels"
 
-#: templates/tasks/base.html:5 templates/tasks/base.html:9
+#: templates/tasks/base.html:5 templates/tasks/base.html:10
 msgid "Менеджер задач"
 msgstr "Task Manager"
 
-#: templates/tasks/base.html:16 templates/tasks/user_list.html:5
+#: templates/tasks/base.html:17 templates/tasks/user_list.html:5
 msgid "Пользователи"
 msgstr "Users"
 
-#: templates/tasks/base.html:20 templates/tasks/status_list.html:5
+#: templates/tasks/base.html:21 templates/tasks/status_list.html:5
 msgid "Статусы"
 msgstr "Statuses"
 
-#: templates/tasks/base.html:26 templates/tasks/task_list.html:8
+#: templates/tasks/base.html:27 templates/tasks/task_list.html:8
 msgid "Задачи"
 msgstr "Tasks"
 
-#: templates/tasks/base.html:34 templates/tasks/user_login.html:6
+#: templates/tasks/base.html:35 templates/tasks/user_login.html:6
 msgid "Вход"
 msgstr "Log In"
 
-#: templates/tasks/base.html:37 templates/tasks/user_create.html:6
+#: templates/tasks/base.html:38 templates/tasks/user_create.html:6
 msgid "Регистрация"
 msgstr "Sign Up"
 
-#: templates/tasks/base.html:43
+#: templates/tasks/base.html:44
 msgid "Выход"
 msgstr "Log Out"
 
-#: templates/tasks/base.html:59
+#: templates/tasks/base.html:61
 msgid "Язык"
 msgstr "Language"
 
-#: templates/tasks/base.html:70 templates/tasks/label_list.html:23
+#: templates/tasks/base.html:72 templates/tasks/label_list.html:23
 #: templates/tasks/label_update.html:9 templates/tasks/status_list.html:23
 #: templates/tasks/status_update.html:9 templates/tasks/task.html:38
 #: templates/tasks/task_list.html:45 templates/tasks/task_update.html:9
