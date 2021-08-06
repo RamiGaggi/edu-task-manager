@@ -1,16 +1,23 @@
-### Tests and linter status:
+# Task Manager
+
+This app can be found here: [Task Manager](https://task-manager-1085.herokuapp.com/)
+
+## Tests and linter status
+
 [![task-manager-check](https://github.com/RamiGaggi/python-project-lvl4/actions/workflows/task-manager-check.yml/badge.svg)](https://github.com/RamiGaggi/python-project-lvl4/actions/workflows/task-manager-check.yml)
-### Codeclimate:
+
+## Codeclimate
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/6693f32bb699eefcafd1/maintainability)](https://codeclimate.com/github/RamiGaggi/python-project-lvl4/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6693f32bb699eefcafd1/test_coverage)](https://codeclimate.com/github/RamiGaggi/python-project-lvl4/test_coverage)
 
-This app can be found at https://task-manager-1085.herokuapp.com/
-
 ## Prerequisites
- - make
- - poetry
+
+- make
+- poetry
 
 ## Install
+
 1) Clone repository ```git clone https://github.com/RamiGaggi/edu-task-manager.git```
 2) Go to working directory ```cd edu-task-manager```
 3) Install dependencies ```make install```
@@ -21,6 +28,7 @@ This app can be found at https://task-manager-1085.herokuapp.com/
 5) Сomplete setup `make setup`
 
 ## Run development server
-```
+
+```python
 make runserver
 ```
