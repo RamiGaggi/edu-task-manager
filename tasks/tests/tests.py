@@ -21,7 +21,7 @@ class TasksUserViewsTests(TaskMixinTest, TestCase):
     update_args = {
         'first_name': 'Ivan',
         'last_name': 'Ivanov',
-        'username': 'KwaKwa',
+        'username': 'Kwa',
         'password1': 'levox3fgv',
         'password2': 'levox3fgv',
     }
@@ -56,7 +56,7 @@ class TasksUserViewsTests(TaskMixinTest, TestCase):
     def test_update(self):
         self.client.post(reverse('tasks:user-login'), self.credentials)
         instances = super().test_update()
-        self.assertEqual(instances.get(pk=self.kwargs['pk']).username, 'KwaKwa')
+        self.assertEqual(instances.get(pk=self.kwargs['pk']).username, 'Kwa')
 
     def test_delete(self):
         self.client.post(reverse('tasks:user-login'), self.credentials)
