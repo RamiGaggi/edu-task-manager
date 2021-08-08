@@ -1,7 +1,7 @@
 install:
 	@poetry install
 
-runserver:
+runserver: migrate
 	@poetry run python manage.py runserver 0.0.0.0:8000
 
 migrations:
@@ -42,7 +42,7 @@ messages:
 	(cd tasks/; poetry run django-admin makemessages -l $(locale))
 
 
-compile_translation: messages
+compile_translation: 
 	@(cd tasks/; poetry run django-admin compilemessages)
 
 dump-data:
