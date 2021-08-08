@@ -3,7 +3,7 @@
 Simple task management system. It allows you to set tasks with tags, assign performers and change their statuses.
 This app can be found here: [Task Manager](https://task-manager-1085.herokuapp.com/)
 
-## Tests and linter status
+## Tests and linter status(CI)
 
 [![task-manager-check](https://github.com/RamiGaggi/python-project-lvl4/actions/workflows/task-manager-check.yml/badge.svg)](https://github.com/RamiGaggi/python-project-lvl4/actions/workflows/task-manager-check.yml)
 
@@ -16,6 +16,7 @@ This app can be found here: [Task Manager](https://task-manager-1085.herokuapp.c
 
 - make
 - poetry
+- docker(optional)
 
 ## Install
 
