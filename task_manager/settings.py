@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import logging
 import os
 from pathlib import Path
-import logging
+
 import dj_database_url
 from dotenv import load_dotenv
 
@@ -29,10 +30,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 logging.basicConfig(
     level=logging.DEBUG,
-    filename=os.path.join(BASE_DIR, 'logs/task_manager.log'),
-    filemode='a',
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     datefmt='%H:%M:%S',
+    handlers=[
+        logging.FileHandler(filename=os.path.join(BASE_DIR, 'logs/task_manager.log'), mode='a'),
+        logging.StreamHandler()
+    ]
 )
 
 
@@ -46,7 +49,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'true').lower() in {'yes', '1', 'true'}
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com']
 
 
 # Application definition
